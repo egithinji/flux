@@ -130,7 +130,7 @@ function retrievePointToDisplay() {
     //use ajax to get the geojson file from the webserver
     var xhttp = new XMLHttpRequest();
     //adding date and time parameter to get request to prevent returning cached file
-    xhttp.open("GET", "location.geojson?" + (new Date()).getTime(), true);
+    xhttp.open("GET", "new_location.geojson?" + (new Date()).getTime(), true);
     xhttp.send();
     xhttp.onreadystatechange = function(map) {
 	if(this.readyState == 4 && this.status == 200) {

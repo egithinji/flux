@@ -1,10 +1,5 @@
 use flux::tweets::Tweet;
-use flux::tweets::convert_tweet_to_feature;
-use flux::file_operations::write_feature_to_file;
-use flux::file_operations::write_feature_collection_to_file;
-use flux::geojson::Feature;
 use flux::geojson::FeatureCollection;
-use flux::geojson::add_feature_to_collection;
 
 fn main() -> std::io::Result<()> {
 
@@ -14,12 +9,27 @@ fn main() -> std::io::Result<()> {
         description: "Sarit Centre".to_owned(),
     };
 
-    let mut fc = FeatureCollection::new();
-    let new_feature = convert_tweet_to_feature(tweet1);
-    write_feature_to_file(&new_feature)?;
-    fc = add_feature_to_collection(fc, new_feature);
-    write_feature_collection_to_file(fc);
+    let tweet2 = Tweet {
+        location: [36.822, -1.289],
+        title: "CBD".to_owned(),
+        description: "KICC Building".to_owned(),
+    };
 
+    let tweet3 = Tweet {
+        location: [36.753, -1.289],
+        title: "Kawangware".to_owned(),
+        description: "Congo".to_owned(),
+    };
+
+    let tweet4 = Tweet {
+        location: [36.796, -1.292],
+        title: "Hurlingham".to_owned(),
+        description: "1414 Rose Avenue".to_owned(),
+    };
+
+    let fc = FeatureCollection::new();
+    let new_feature = tweet3.to_feature();
+    fc.add_feature(new_feature)?;
     Ok(())
 
 }
