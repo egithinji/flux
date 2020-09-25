@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .marker {
+  	background-image: url('mapbox-icon.png');
+  	background-size: cover;
+  	width: 50px;
+  	height: 50px;
+  	border-radius: 50%;
+  	cursor: pointer;
+	}
+	
+      @keyframes fadein {from {opacity: 0;} to {opacity: 1;}}
+      .mapboxgl-popup {
+  	max-width: 200px;
+	animation: fadein 6s;
+	}	
+
+      .mapboxgl-popup-content {
+  	text-align: center;
+  	font-family: 'Open Sans', sans-serif;
+	}
+
+    </style>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+
+<div id='map'></div>
+<div id='demo'>
+   <p>Hello</p>
+</div>
+<script>
+
+//set up the map
+mapboxgl.accessToken = 'pk.eyJ1IjoiZXJpY2dpdGhpbmppIiwiYSI6ImNrZmM4ODFtbzE1dzEyd281ajkydjViMHMifQ.T_3ACROnINNaOH3PBSXujA';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/ericgithinji/ckfcmujs49j1v19oe4duz53oj',
+    center: [36.823, -1.289],
+    zoom: 12
+   });
+
+//variable for holding all markers to enable refreshing of markers
+//(see https://stackoverflow.com/a/55917076/10933532)
+//var currentMarkers = [];
+
+//display the point
+retrievePointToDisplay()
+
+displayAllPointsCollected();
+
+function displayAllPointsCollected() {
+    //use ajax to get the geojson file from the webserver
+    var xhttp = new XMLHttpRequest();
+    //adding date and time parameter to get request to prevent returning cached file
+    xhttp.open("GET", "locations.geojson?" + (new Date()).getTime(), true);
+    xhttp.send();
+    xhttp.onreadystatechange = function(map) {
+        if(this.readyState == 4 && this.status == 200) {
+                //display the points on the map
+                displayAllPoints(this.responseText);
+        }
+    }
+}
+
+function displayAllPoints(points) {
+   //convert the text into a json object
+   var geojson = JSON.parse(points);
+  
+   //remove any markers from the map
+    //if (currentMarkers !== null) {
+       //for (var i = currentMarkers.length - 1; i >= 0; i--) {
+          //currentMarkers[i].remove();
+       //}
+    //}
+
+   // add markers to map
+   geojson.features.forEach(function(marker) {
+
+        // create a HTML element for each feature
+        var el = document.createElement('div');
+        el.className = 'marker';
+
+        // make a marker for each feature and add to the map
+        var oneMarker = new mapboxgl.Marker(el)
+        .setLngLat(marker.geometry.coordinates)
+        .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+          .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+        .addTo(map);
+   	
+
+   	const markerDiv = oneMarker.getElement();
+   	markerDiv.addEventListener('mouseenter', () => oneMarker.togglePopup());
+   	markerDiv.addEventListener('mouseleave', () => oneMarker.togglePopup());
+
+        //currentMarkers.push(oneMarker);
+   
+   });
+
+}
+
+
+//then regularly check the file server if there is a new point to display
+setInterval(function(){
+    retrievePointToDisplay()
+}, 5000)
+
+
+function retrievePointToDisplay() {
+    //use ajax to get the geojson file from the webserver
+    var xhttp = new XMLHttpRequest();
+    //adding date and time parameter to get request to prevent returning cached file
+    xhttp.open("GET", "location.geojson?" + (new Date()).getTime(), true);
+    xhttp.send();
+    xhttp.onreadystatechange = function(map) {
+	if(this.readyState == 4 && this.status == 200) {
+		//display the points on the map
+		displayPoint(this.responseText);
+	}
+    }
+}
+
+var lastDisplayedPoint = {};
+
+function displayPoint(point) {
+   //convert the text into a json object
+   var geojson = JSON.parse(point);
+   if (JSON.stringify(lastDisplayedPoint) === JSON.stringify(geojson)) {
+		return 0;
+   }
+
+   lastDisplayedPoint = geojson;
+   //remove any markers from the map
+    //if (currentMarkers !== null) {
+       //for (var i = currentMarkers.length - 1; i >= 0; i--) {
+          //currentMarkers[i].remove();
+       //}
+    //}
+
+   
+   //add a marker corresponding to the point in the geojson file
+   var el = document.createElement('div');
+   el.className = 'marker';
+   const oneMarker = new mapboxgl.Marker(el)
+	.setLngLat(geojson.geometry.coordinates)
+		.setPopup(new mapboxgl.Popup({ offset: 25 })
+		   .setHTML('<h3>' + geojson.properties.title + '</h3><p>' + geojson.properties.description + '</p>'))
+	.addTo(map);
+   
+   oneMarker.togglePopup();
+   setTimeout(function(){
+	 oneMarker.togglePopup();
+   },5000);
+  
+   const markerDiv = oneMarker.getElement();
+   markerDiv.addEventListener('mouseenter', () => oneMarker.togglePopup());
+   markerDiv.addEventListener('mouseleave', () => oneMarker.togglePopup());
+   }
+
+</script>
+
+</body>
+</html>
