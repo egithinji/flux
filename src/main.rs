@@ -1,5 +1,7 @@
 use flux::tweets::Tweet;
 use flux::geojson::FeatureCollection;
+use flux::file_operations::get_linestring_from_file;
+use geo::LineString;
 
 fn main() -> std::io::Result<()> {
 
@@ -27,9 +29,14 @@ fn main() -> std::io::Result<()> {
         description: "1414 Rose Avenue".to_owned(),
     };
 
-    let fc = FeatureCollection::new();
-    let new_feature = tweet3.to_feature();
-    fc.add_feature(new_feature)?;
+    //let fc = FeatureCollection::new();
+    //let new_feature = tweet4.to_feature();
+    //fc.add_feature(new_feature)?;
+    
+    let ls = get_linestring_from_file("./pangani.txt",0.0,0.0);
+    
+    println!("{:?}",ls);
+
     Ok(())
 
 }

@@ -2,7 +2,7 @@
     use crate::geojson::Feature;
     use crate::geojson::Geometry;
     use crate::geojson::Properties;
-    
+
     //To hold relevant data pertaining to a tweet
     pub struct Tweet {
         pub location: [f64;2],
