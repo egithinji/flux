@@ -2,7 +2,12 @@ use serde::{Deserialize, Serialize};
 use crate::file_operations::write_feature_to_file;
 use crate::file_operations::write_feature_collection_to_file;
 use geo::LineString;
-
+use geo::Polygon;
+use geo::MultiPolygon;
+use geo::CoordinateType;
+use delaunator::Point as DelPoint;
+use delaunator::triangulate;
+use rand::Rng;
 
 //Corresponds to geojson geometry key
 #[derive(Serialize, Deserialize)]
@@ -84,3 +89,87 @@ pub fn add_feature_to_collection(mut fc: FeatureCollection, feature: Feature) ->
    Ok(())
 }
 
+pub fn triangulate_polygon(poly: Polygon<f64>) 
+//where T: std::cmp::PartialOrd,
+      //T: std::marker::Copy,
+      //T: num_traits::cast::NumCast,
+      //T: num_traits::Num,
+
+
+{
+    
+    
+    //get a reference of the exterior linestring of the polygon
+    let ls = poly.exterior();
+
+   
+    //get a vector of delaunator points from the linestring
+    let del_points: Vec<DelPoint> = linestring_to_delaunator(ls.clone());
+
+    //triangulate the delaunator points
+    let result = triangulate(&del_points).expect("No triangulation exists.");
+
+    println!("Triangles are: {:?}",result.triangles);
+
+    let multipolygon = get_polygons_from_triangles(result.triangles, ls);    
+
+    for p in multipolygon.into_iter() {
+        println!("A random point in one of the triangles is {:?}", generate_random_point_in_triangle(p));
+    }
+
+}
+
+fn linestring_to_delaunator(ls: LineString<f64>) -> Vec<DelPoint> 
+
+{
+    let mut del_points: Vec<DelPoint> = Vec::new();
+    for point in ls.points_iter() {
+        del_points.push(DelPoint{x: point.x(), y: point.y()}); 
+    }
+
+    del_points
+}
+
+fn get_polygons_from_triangles(triangles: Vec<usize>, linestring: &LineString<f64>) -> MultiPolygon<f64> {
+    let mut inner_polys: Vec<Polygon<f64>> = Vec::new();
+    let mut coord: Vec<_> = Vec::new();
+    let mut count = 0;
+    
+    for index in triangles.iter() {
+        if count == 3 {
+            inner_polys.push(Polygon::new(LineString::from(coord.clone()), vec![],));
+            count = 0;
+            coord.clear();
+        }
+        coord.push(linestring[*index].x_y()); 
+        count = count + 1;    
+    }
+
+    MultiPolygon::<f64>(inner_polys)
+   
+}
+
+fn generate_random_point_in_triangle(triangle: Polygon<f64>) -> (f64, f64) {
+    //Using formula from section 4.2 in the following book:
+    //https://www.cs.princeton.edu/~funk/tog02.pdf
+    //See also https://math.stackexchange.com/questions/18686/uniform-random-point-in-triangle
+    
+    let mut rng = rand::thread_rng();
+    let r1: f64 = rng.gen_range(0.0, 1.0);
+    let r2: f64 = rng.gen_range(0.0, 1.0);
+
+    let ls = triangle.exterior().clone();
+
+    //get the three vertices of the triangle
+    let a = ls[0];
+    let b = ls[1];
+    let c = ls[2];
+    
+    let x = (1.0-r1.sqrt())*a.x + r1.sqrt()*(1.0-r2)*b.x + r1.sqrt()*r2*c.x;
+
+    let y = (1.0-r1.sqrt())*a.y + r1.sqrt()*(1.0-r2)*b.y + r1.sqrt()*r2*c.y;
+        
+        
+
+    (x, y)
+}

@@ -1,7 +1,10 @@
 use flux::tweets::Tweet;
 use flux::geojson::FeatureCollection;
-use flux::file_operations::get_linestring_from_file;
-use geo::LineString;
+use flux::file_operations::get_polygon_from_file;
+use flux::geojson::triangulate_polygon;
+use geo::Polygon;
+use geo::Point;
+use geo::prelude::Contains;
 
 fn main() -> std::io::Result<()> {
 
@@ -33,9 +36,18 @@ fn main() -> std::io::Result<()> {
     //let new_feature = tweet4.to_feature();
     //fc.add_feature(new_feature)?;
     
-    let ls = get_linestring_from_file("./pangani.txt",0.0,0.0);
+    let poly = get_polygon_from_file("./pangani.txt",0.0,0.0);
     
-    println!("{:?}",ls);
+    println!("The polygon is: \n\n {:?}", poly);
+    
+    triangulate_polygon(poly);
+
+
+    //let p1: Point<f64> = (36.83966875076294,-1.2708122539392026).into(); 
+   
+    //println!("\nChecking if it contains: {:?}", (36.83966875076294,-1.2708122539392026));
+
+    //println!("\nThe answer is {}",poly.contains(&p1));
 
     Ok(())
 

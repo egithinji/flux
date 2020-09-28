@@ -8,6 +8,7 @@ use std::error::Error;
 use std::io::BufReader;
 use std::path::Path;
 use geo::LineString;
+use geo::Polygon;
 use geo::Coordinate;
 use std::io::{self, BufRead};
 
@@ -26,8 +27,8 @@ pub fn write_feature_collection_to_file(f: FeatureCollection) -> std::io::Result
     Ok(())
 }
 
-//Reads a file that contains a series of coordinates in the format [lat,long],[lat,long],[lat,long]... and returns a LineString object
-pub fn get_linestring_from_file<T>(filename: &str, default_long: T, default_lat: T) -> LineString<T>
+//Reads a file that contains a series of coordinates in the format [lat,long],[lat,long],[lat,long]... and returns a Polygon object
+pub fn get_polygon_from_file<T>(filename: &str, default_long: T, default_lat: T) -> Polygon<T>
 where
     T: geo::CoordinateType,
     T: std::str::FromStr,
@@ -35,7 +36,10 @@ where
     <T as std::str::FromStr>::Err: std::fmt::Debug,
 {
    
-    let mut vec: Vec<_> = vec!([default_long,default_lat]);
+    //let mut vec: Vec<_> = vec!([default_long,default_lat]);
+    let mut vec: Vec<_> = Vec::new();
+    let mut coor: [T;2] = [default_long, default_lat];
+    
 
     // I'm using the read_liines method described here:
     // https://doc.rust-lang.org/stable/rust-by-example/std_misc/file/read_lines.html
@@ -44,7 +48,6 @@ where
         //Consumes the iterator, returns an (Optional) String
         for line in lines {
             if let Ok(v) = line {
-                let mut coor: [T;2] = [default_long, default_lat];
                 //Skip the lines that contain '[', '],', and ']' 
                 if (v != "[" && v != "]," && v != "]"){
                    //If the line ends with a ',' then it's a longitude coordinate
@@ -55,8 +58,8 @@ where
                    } else { //else this is a latitude coordinate
                        let lat = v.parse::<T>().unwrap();
                        coor[1] = lat;
+                       vec.push(coor);
                    }
-                   vec.push(coor);
                 }
             }
         }
@@ -64,8 +67,8 @@ where
     
 
     let ls: LineString<T> = vec.into(); 
-   
-    ls
+    let p = Polygon::new(ls, vec![]); 
+    p
 }
 
 // The output is wrapped in a Result to allow matching on errors
