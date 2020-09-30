@@ -36,7 +36,7 @@ fn main() -> std::io::Result<()> {
     //let new_feature = tweet4.to_feature();
     //fc.add_feature(new_feature)?;
     
-    let poly = get_polygon_from_file("./pangani.txt",0.0,0.0);
+    let poly = get_polygon_from_file("./polygons/pangani.txt",0.0,0.0);
     
     println!("The polygon is: \n\n {:?}", poly);
     
