@@ -11,6 +11,9 @@ use geo::LineString;
 use geo::Polygon;
 use geo::Coordinate;
 use std::io::{self, BufRead};
+use std::fs::OpenOptions;
+use std::io::prelude::*;
+use std::collections::HashMap;
 
 
 //write a single feature to the web server
@@ -87,4 +90,56 @@ fn get_coordinate<T: geo::CoordinateType>(long: T, lat: T) -> geo::Coordinate<T>
    };
 
    c
+}
+
+pub fn save_location_description(description: &str, poly_file: &str) {
+    //Writes a location description to the location_descriptions.txt file.
+    //On each line, the file will contain a file description followed by a 
+    //space followed by a polygon file.
+    //e.g. buru buru_buru.txt
+    
+    let mut f = OpenOptions::new()
+        .append(true)
+        .open("location_descriptions.txt")
+        .unwrap();
+
+    if let Err(e) = writeln!(f, "{} => polygons/{}", description, poly_file) {
+        eprintln!("Couldn't write to file: {}", e);
+    }
+
+
+}
+
+pub fn get_hashmap_of_locations() -> HashMap<String, Polygon<f64>> {
+    //Reads the location_descriptions file line by line
+    //and returns a HashMap where the keys are location descriptions
+    //and the values are polygons. e.g. Key: roysambu Value: 'a polygon of roysambu'
+
+
+    let mut locations = HashMap::new();
+
+    if let Ok(lines) = read_lines("location_descriptions.txt") {
+       
+
+        for line in lines {
+            
+            if let Ok(text) = line {
+               
+                //The part before '=>' is the description, the part
+                //after is the polygon file
+                
+                let vec = text.split("=>").collect::<Vec<_>>();
+                let description = vec[0].trim().to_string();
+                let polygon_file = vec[1].trim();
+                let polygon = get_polygon_from_file(polygon_file,0.0,0.0);
+                locations.insert(description, polygon);
+
+            }
+
+        }
+
+    }
+
+    locations
+
 }

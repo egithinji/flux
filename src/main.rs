@@ -1,10 +1,13 @@
 use flux::tweets::Tweet;
 use flux::geojson::FeatureCollection;
 use flux::file_operations::get_polygon_from_file;
-use flux::geojson::triangulate_polygon;
+use flux::file_operations::save_location_description;
+use flux::file_operations::get_hashmap_of_locations;
+use flux::geojson::get_random_point_in_polygon;
 use geo::Polygon;
 use geo::Point;
 use geo::prelude::Contains;
+use flux::pattern_matching;
 
 fn main() -> std::io::Result<()> {
 
@@ -36,11 +39,11 @@ fn main() -> std::io::Result<()> {
     //let new_feature = tweet4.to_feature();
     //fc.add_feature(new_feature)?;
     
-    let poly = get_polygon_from_file("./polygons/pangani.txt",0.0,0.0);
+    //let poly = get_polygon_from_file("./polygons/pangani.txt",0.0,0.0);
     
-    println!("The polygon is: \n\n {:?}", poly);
+    //println!("The polygon is: \n\n {:?}", poly);
     
-    triangulate_polygon(poly);
+    //triangulate_polygon(poly);
 
 
     //let p1: Point<f64> = (36.83966875076294,-1.2708122539392026).into(); 
@@ -49,6 +52,20 @@ fn main() -> std::io::Result<()> {
 
     //println!("\nThe answer is {}",poly.contains(&p1));
 
-    Ok(())
+    
+   //match locations.get("sdfds") {
+        //Some(polygon) => println!("Roysambu matches {:?}",polygon),
+        //_ => println!("Nothing matching that key"),
+  // }
+
+    let locations = get_hashmap_of_locations();
+    match pattern_matching::match_location_description("no power in hurlingham",locations) {
+        Some(v) => println!("Found expression {}", v),
+        None => println!("Expression not found")
+    }
+    
+
+
+Ok(())
 
 }

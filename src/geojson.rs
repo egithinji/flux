@@ -89,15 +89,11 @@ pub fn add_feature_to_collection(mut fc: FeatureCollection, feature: Feature) ->
    Ok(())
 }
 
-pub fn triangulate_polygon(poly: Polygon<f64>) 
-//where T: std::cmp::PartialOrd,
-      //T: std::marker::Copy,
-      //T: num_traits::cast::NumCast,
-      //T: num_traits::Num,
-
+pub fn get_random_point_in_polygon(poly: Polygon<f64>) -> (f64, f64)  
+//First triangulates the polygon using delaunator triangulation.
+//Then uses formula to generate random point in one of the triangles
 
 {
-    
     
     //get a reference of the exterior linestring of the polygon
     let ls = poly.exterior();
@@ -111,11 +107,22 @@ pub fn triangulate_polygon(poly: Polygon<f64>)
 
     println!("Triangles are: {:?}",result.triangles);
 
-    let multipolygon = get_polygons_from_triangles(result.triangles, ls);    
+    let multipolygon = get_polygons_from_triangles(result.triangles, ls);
 
+    let mut points: Vec<_> = Vec::new();
+
+    //Iterate through the multipolygon of triangles and generate a random
+    //point within each
     for p in multipolygon.into_iter() {
-        println!("A random point in one of the triangles is {:?}", generate_random_point_in_triangle(p));
+        points.push(generate_random_point_in_triangle(p));
     }
+
+    //select one of the random points and return it
+    let mut rng = rand::thread_rng();
+    let num = rng.gen_range(0,points.len());
+    let random_point: (f64, f64) = points[num];
+
+    random_point
 
 }
 
