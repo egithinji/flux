@@ -36,14 +36,5 @@ impl Tweet {
     }
 }
 
-//pub fn get_location_from_text(location: &str, locations: &Hashmap) -> Options<[f64;2]> {
-   // Checks if a given location is present in the locations hashmap
-   // returns 
-    //match locations.get(location) {
-        //Some(polygon) => ,
-        //_ => 
-   // }
 
 
-
-//}

@@ -24,9 +24,9 @@ use std::collections::HashMap;
 }
 
 //write a feature collection to the web server
-pub fn write_feature_collection_to_file(f: FeatureCollection) -> std::io::Result<()> {
+pub fn write_feature_collection_to_file(f: &FeatureCollection) -> std::io::Result<()> {
     let file = File::create("locations.geojson")?;
-    serde_json::to_writer(file, &f)?;
+    serde_json::to_writer(file, f)?;
     Ok(())
 }
 
@@ -94,8 +94,8 @@ fn get_coordinate<T: geo::CoordinateType>(long: T, lat: T) -> geo::Coordinate<T>
 
 pub fn save_location_description(description: &str, poly_file: &str) {
     //Writes a location description to the location_descriptions.txt file.
-    //On each line, the file will contain a file description followed by a 
-    //space followed by a polygon file.
+    //On each line, the file will contain a file description followed by
+    //'=>' followed by a polygon file.
     //e.g. buru buru_buru.txt
     
     let mut f = OpenOptions::new()
@@ -141,5 +141,19 @@ pub fn get_hashmap_of_locations() -> HashMap<String, Polygon<f64>> {
     }
 
     locations
+
+}
+
+pub fn write_unmatched_location(text: &str) {
+    //When no location is matched, write the tweet text to "unmatched_locations.txt"
+    let mut f = OpenOptions::new()
+        .append(true)
+        .open("unmatched_locations.txt")
+        .unwrap();
+
+    if let Err(e) = writeln!(f, "***** \n{}", text) {
+        eprintln!("Couldn't write to file: {}", e);
+    }
+
 
 }

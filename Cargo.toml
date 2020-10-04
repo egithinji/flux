@@ -14,3 +14,7 @@ geo = "0.14.2"
 delaunator = "0.2.0"
 num-traits = "0.2"
 rand = "0.7.3"
+regex = "1"
+egg-mode = "0.15"
+tokio = { version = "0.2", features = ["full"] }
+futures = "0.3"

@@ -1,71 +1,120 @@
 use flux::tweets::Tweet;
+use flux::geojson::Feature;
 use flux::geojson::FeatureCollection;
 use flux::file_operations::get_polygon_from_file;
 use flux::file_operations::save_location_description;
 use flux::file_operations::get_hashmap_of_locations;
+use flux::file_operations::write_unmatched_location;
+use flux::file_operations::write_feature_collection_to_file;
 use flux::geojson::get_random_point_in_polygon;
 use geo::Polygon;
 use geo::Point;
 use geo::prelude::Contains;
 use flux::pattern_matching;
-
-fn main() -> std::io::Result<()> {
-
-    let tweet1 = Tweet {
-        location: [36.802, -1.261],
-        title: "Westlands".to_owned(),
-        description: "Sarit Centre".to_owned(),
-    };
-
-    let tweet2 = Tweet {
-        location: [36.822, -1.289],
-        title: "CBD".to_owned(),
-        description: "KICC Building".to_owned(),
-    };
-
-    let tweet3 = Tweet {
-        location: [36.753, -1.289],
-        title: "Kawangware".to_owned(),
-        description: "Congo".to_owned(),
-    };
-
-    let tweet4 = Tweet {
-        location: [36.796, -1.292],
-        title: "Hurlingham".to_owned(),
-        description: "1414 Rose Avenue".to_owned(),
-    };
-
-    //let fc = FeatureCollection::new();
-    //let new_feature = tweet4.to_feature();
-    //fc.add_feature(new_feature)?;
-    
-    //let poly = get_polygon_from_file("./polygons/pangani.txt",0.0,0.0);
-    
-    //println!("The polygon is: \n\n {:?}", poly);
-    
-    //triangulate_polygon(poly);
+use egg_mode::error::Result;
+use egg_mode::search::{self, ResultType};
+use futures::TryStreamExt;
+use egg_mode::stream::StreamMessage;
+use egg_mode;
+use flux::pattern_matching::match_location_description;
 
 
-    //let p1: Point<f64> = (36.83966875076294,-1.2708122539392026).into(); 
-   
-    //println!("\nChecking if it contains: {:?}", (36.83966875076294,-1.2708122539392026));
+const CONSUMER_SECRET: &str = "KPe3VuA3sddUEcE4BzsWGOG5s7B2VoerkN7CjJP3drHNqfAuyV";
+const CONSUMER_KEY: &str = "RLWbvzksHLHAZYDBhVc26SAEm";
+const ACCESS_TOKEN_SECRET: &str = "5xbJrYXKer89YvsuHIWzJzSpW45wlz8JwSL9X5uuTuWxW";
+const ACCESS_TOKEN: &str = "1253810304-jdIZtGSSvT6ngkUT4zIGo3Lfuvcad6l8wd387In";
 
-    //println!("\nThe answer is {}",poly.contains(&p1));
+#[tokio::main]
+async fn main() {
+
+//Create a new feature collection and write it to the web server
+let mut fc = FeatureCollection::new();
+write_feature_collection_to_file(&fc);
 
     
-   //match locations.get("sdfds") {
-        //Some(polygon) => println!("Roysambu matches {:?}",polygon),
-        //_ => println!("Nothing matching that key"),
-  // }
+let con_token = egg_mode::KeyPair::new(CONSUMER_KEY, CONSUMER_SECRET);
+let acc_token = egg_mode::KeyPair::new(ACCESS_TOKEN, ACCESS_TOKEN_SECRET);
 
-    let locations = get_hashmap_of_locations();
-    match pattern_matching::match_location_description("no power in hurlingham",locations) {
-        Some(v) => println!("Found expression {}", v),
-        None => println!("Expression not found")
+    let token = egg_mode::auth::Token::Access{consumer: con_token, access: acc_token};
+    println!("Live streaming tweets...");
+
+    println!("Ctrl-C to quit\n");
+
+    let stream = egg_mode::stream::filter()
+        .track(&["KenyaPower_Care"])
+        .start(&token)
+        .try_for_each(|m| {
+            if let StreamMessage::Tweet(tweet) = m {
+                println!("\n-----------------------------------");
+                println!("Tweeted at: {}\n{}",tweet.created_at,tweet.text);
+                println!("-----------------------------------");
+                match process_tweet(tweet) {
+                    Some(f) => {
+                        fc.add_feature(f);
+                    },
+                    None => {}
+                }
+            } else {
+                println!("{:?}",m);
+            }
+            futures::future::ok(())
+        });
+    if let Err(e) = stream.await {
+        println!("Stream error: {}", e);
+        println!("Disconnected")
+
     }
-    
-
-
-Ok(())
 
 }
+
+fn process_tweet(tweet: egg_mode::tweet::Tweet) -> Option<Feature> {
+    //Please note the tweet here is an egg_mode tweet not the same as a flux tweet.
+    //We want to check if the text of the tweet contains any of the location descriptions we have on
+    //file.
+    
+    //First of all, we're not interested in retweets
+    if pattern_matching::is_retweet(&tweet.text) {
+        return None
+    }
+   
+    //Get a hashmap of location descriptions to polygons
+    let locations = get_hashmap_of_locations();
+
+    //Attempt to find a location description in the tweet's text
+    let description = match_location_description(&tweet.text, &locations);
+
+    match description {
+        Some(v) => {
+            //If a location_description is matched, get a random point in the corresponding polygon
+            println!("Matched {}!",v);
+
+            //First get the polygon corresponding to the description
+            let poly = locations.get(&v).unwrap().to_owned();
+
+            //Then get the random point
+            let random_point = get_random_point_in_polygon(poly);
+
+            //Then create a flux tweet with all this information
+            let new_tweet = Tweet {
+                location: [random_point.0, random_point.1],
+                title: format!("Tweeted at: {}",tweet.created_at),
+                description: tweet.text.to_owned(),
+            };
+
+            //Convert the tweet to a Feature
+            let new_feature = new_tweet.to_feature();
+
+            Some(new_feature)
+
+        },
+        None => {
+            println!("No location matched.");
+            write_unmatched_location(&tweet.text);
+            None
+        }
+    }
+
+
+}
+
+

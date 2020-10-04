@@ -47,7 +47,7 @@ impl FeatureCollection {
         }
     }
 
-    pub fn add_feature(mut self, feature: Feature) -> std::io::Result<()> {
+    pub fn add_feature(&mut self, feature: Feature) -> std::io::Result<()> {
        //add a feature to this feature collection
        //and update the locations.geojson and new_location.geojson files on the webserver.
        
@@ -84,7 +84,7 @@ pub fn add_feature_to_collection(mut fc: FeatureCollection, feature: Feature) ->
    fc.features.push(feature);
 
    //update the locations.geojson file
-   write_feature_collection_to_file(fc)?;
+   write_feature_collection_to_file(&fc)?;
    
    Ok(())
 }

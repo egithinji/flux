@@ -2,7 +2,7 @@ use regex::Regex;
 use std::collections::HashMap;
 use geo::Polygon;
 
-pub fn match_location_description(text: &str, locations: HashMap<String, Polygon<f64>>) -> Option<String> {
+pub fn match_location_description(text: &str, locations: &HashMap<String, Polygon<f64>>) -> Option<String> {
     //Checks whether any of the keys of the location_descriptions hashmap
     //are matched in the provided text.
     //Adds all the matches to a vector.
@@ -14,10 +14,10 @@ pub fn match_location_description(text: &str, locations: HashMap<String, Polygon
 
     let mut descriptions: Vec<&str> = Vec::new();
 
-    for (description, polygon) in &locations {
+    for (description, polygon) in locations {
         
-        let re = Regex::new(description).unwrap();
-        if re.is_match(text) {
+        let re = Regex::new(&description.to_lowercase()).unwrap();
+        if re.is_match(&text.to_lowercase()) {
             println!("Found a match!");
             descriptions.push(description);
         }
@@ -44,4 +44,10 @@ fn longest(list: Vec<&str>) -> String {
     }
 
     longest.to_owned()
+}
+
+pub fn is_retweet(text: &str) -> bool {
+    //Checks if the tweet is a retweet (beginning with 'RT')
+    let re = Regex::new(r"^RT").unwrap();
+    re.is_match(text)
 }
