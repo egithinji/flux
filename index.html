@@ -32,7 +32,7 @@
       @keyframes fadein {from {opacity: 0;} to {opacity: 1;}}
       .mapboxgl-popup {
   	max-width: 200px;
-	animation: fadein 6s;
+	animation: fadein 3s;
 	}	
 
       .mapboxgl-popup-content {
@@ -60,14 +60,101 @@ var map = new mapboxgl.Map({
     zoom: 12
    });
 
-//variable for holding all markers to enable refreshing of markers
-//(see https://stackoverflow.com/a/55917076/10933532)
-//var currentMarkers = [];
+
+map.on('load', function() {
+
+    map.addSource('tweets', {
+	type: 'geojson',
+	data: './locations.geojson'
+    });
+
+    map.addLayer({
+	  id: 'tweet-heat',
+	  type: 'heatmap',
+	  source: 'tweets',
+	  maxzoom: 15,
+	  paint: {
+	    // increase intensity as zoom level increases
+	    'heatmap-intensity': {
+	      stops: [
+		[11, 1],
+		[15, 3]
+	      ]
+	    },
+	    // assign color values be applied to points depending on their density
+	    'heatmap-color': [
+	      'interpolate',
+	      ['linear'],
+	      ['heatmap-density'],
+	      0, 'rgba(0, 0, 255, 0)',
+	      0.1, 'royalblue',
+	      0.3, 'cyan',
+	      0.5, 'lime',
+	      0.7, 'yellow',
+	      1, 'red'
+	    ],
+	    // increase radius as zoom increases
+	    'heatmap-radius': {
+	      stops: [
+		[11, 15],
+		[15, 20]
+	      ]
+	    },
+	    // decrease opacity to transition into the circle layer
+	    'heatmap-opacity': {
+	      default: 1,
+	      stops: [
+		[14, 1],
+		[15, 0]
+	      ]
+	    },
+	  }
+}, 'waterway-label');
+
+   map.addLayer({
+  	id: 'tweet-point',
+  	type: 'circle',
+  	source: 'tweets',
+  	minzoom: 14,
+  	paint: {
+    	// increase the radius of the circle as the zoom level and dbh value increases
+    	'circle-radius': 10,
+	'circle-blur': 0.5,
+	'circle-color': 'red',
+    	'circle-stroke-color': 'white',
+    	'circle-stroke-width': 1,
+    	'circle-opacity': {
+      	stops: [
+        	[14, 0],
+        	[15, 1]
+      	]
+    	}
+  	}
+}, 'waterway-label');
+
+    //Create a popup, but don't add it to the map yet.
+    var popup = new mapboxgl.Popup({
+	closeButton: false,
+	closeOnClick: false
+    });
+
+    map.on('mouseenter', 'tweet-point', function(e) {
+	// Change the cursor style as a UI indicator.
+	map.getCanvas().style.cursor = 'pointer';	
+	popup.setLngLat(e.features[0].geometry.coordinates).setHTML('<b>Text:</b> ' + e.features[0].properties.description).addTo(map);
+    });
+
+    map.on('mouseleave', 'tweet-point', function () {
+	map.getCanvas().style.cursor = '';
+	popup.remove();
+    });
+
+});
 
 //display the point
-retrievePointToDisplay()
+//retrievePointToDisplay()
 
-displayAllPointsCollected();
+//displayAllPointsCollected();
 
 function displayAllPointsCollected() {
     //use ajax to get the geojson file from the webserver
@@ -87,13 +174,6 @@ function displayAllPoints(points) {
    //convert the text into a json object
    var geojson = JSON.parse(points);
   
-   //remove any markers from the map
-    //if (currentMarkers !== null) {
-       //for (var i = currentMarkers.length - 1; i >= 0; i--) {
-          //currentMarkers[i].remove();
-       //}
-    //}
-
    // add markers to map
    geojson.features.forEach(function(marker) {
 
@@ -112,8 +192,6 @@ function displayAllPoints(points) {
    	const markerDiv = oneMarker.getElement();
    	markerDiv.addEventListener('mouseenter', () => oneMarker.togglePopup());
    	markerDiv.addEventListener('mouseleave', () => oneMarker.togglePopup());
-
-        //currentMarkers.push(oneMarker);
    
    });
 
@@ -122,7 +200,7 @@ function displayAllPoints(points) {
 
 //then regularly check the file server if there is a new point to display
 setInterval(function(){
-    retrievePointToDisplay()
+    //retrievePointToDisplay()
 }, 5000)
 
 
@@ -150,13 +228,6 @@ function displayPoint(point) {
    }
 
    lastDisplayedPoint = geojson;
-   //remove any markers from the map
-    //if (currentMarkers !== null) {
-       //for (var i = currentMarkers.length - 1; i >= 0; i--) {
-          //currentMarkers[i].remove();
-       //}
-    //}
-
    
    //add a marker corresponding to the point in the geojson file
    var el = document.createElement('div');

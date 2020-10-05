@@ -16,7 +16,6 @@ kasa => polygons/kasarani.txt
 kawangware => polygons/kawangware.txt
 ungwaro => polygons/kawangware.txt
 kilimani => polygons/kilimani.txt
-kili => polygons/kilimani.txt
 lower kabete => polygons/lower_kabete.txt
 pangani => polygons/pangani.txt
 pango => polygons/pangani.txt
