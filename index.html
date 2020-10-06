@@ -156,7 +156,13 @@ map.on('load', function() {
 
 //displayAllPointsCollected();
 
-function displayAllPointsCollected() {
+//Regularly check the file server if there is a new point to display
+setInterval(function(){
+    retrieveData()
+}, 5000)
+
+
+function retrieveData() {
     //use ajax to get the geojson file from the webserver
     var xhttp = new XMLHttpRequest();
     //adding date and time parameter to get request to prevent returning cached file
@@ -165,88 +171,17 @@ function displayAllPointsCollected() {
     xhttp.onreadystatechange = function(map) {
         if(this.readyState == 4 && this.status == 200) {
                 //display the points on the map
-                displayAllPoints(this.responseText);
+                updateMap(this.responseText);
         }
     }
 }
 
-function displayAllPoints(points) {
+function updateMap(points) {
    //convert the text into a json object
    var geojson = JSON.parse(points);
-  
-   // add markers to map
-   geojson.features.forEach(function(marker) {
-
-        // create a HTML element for each feature
-        var el = document.createElement('div');
-        el.className = 'marker';
-
-        // make a marker for each feature and add to the map
-        var oneMarker = new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-          .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
-        .addTo(map);
-   	
-
-   	const markerDiv = oneMarker.getElement();
-   	markerDiv.addEventListener('mouseenter', () => oneMarker.togglePopup());
-   	markerDiv.addEventListener('mouseleave', () => oneMarker.togglePopup());
-   
-   });
-
+   //update the map  
+   map.getSource('tweets').setData(geojson); 
 }
-
-
-//then regularly check the file server if there is a new point to display
-setInterval(function(){
-    //retrievePointToDisplay()
-}, 5000)
-
-
-function retrievePointToDisplay() {
-    //use ajax to get the geojson file from the webserver
-    var xhttp = new XMLHttpRequest();
-    //adding date and time parameter to get request to prevent returning cached file
-    xhttp.open("GET", "new_location.geojson?" + (new Date()).getTime(), true);
-    xhttp.send();
-    xhttp.onreadystatechange = function(map) {
-	if(this.readyState == 4 && this.status == 200) {
-		//display the points on the map
-		displayPoint(this.responseText);
-	}
-    }
-}
-
-var lastDisplayedPoint = {};
-
-function displayPoint(point) {
-   //convert the text into a json object
-   var geojson = JSON.parse(point);
-   if (JSON.stringify(lastDisplayedPoint) === JSON.stringify(geojson)) {
-		return 0;
-   }
-
-   lastDisplayedPoint = geojson;
-   
-   //add a marker corresponding to the point in the geojson file
-   var el = document.createElement('div');
-   el.className = 'marker';
-   const oneMarker = new mapboxgl.Marker(el)
-	.setLngLat(geojson.geometry.coordinates)
-		.setPopup(new mapboxgl.Popup({ offset: 25 })
-		   .setHTML('<h3>' + geojson.properties.title + '</h3><p>' + geojson.properties.description + '</p>'))
-	.addTo(map);
-   
-   oneMarker.togglePopup();
-   setTimeout(function(){
-	 oneMarker.togglePopup();
-   },5000);
-  
-   const markerDiv = oneMarker.getElement();
-   markerDiv.addEventListener('mouseenter', () => oneMarker.togglePopup());
-   markerDiv.addEventListener('mouseleave', () => oneMarker.togglePopup());
-   }
 
 </script>
 

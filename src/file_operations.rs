@@ -56,12 +56,31 @@ where
                    //If the line ends with a ',' then it's a longitude coordinate
                    if (v.contains(",")) {
                         //Remove the ',' and then parse the string into a T (which is a float)
-                        let long = v.replace(",","").parse::<T>().unwrap();
-                        coor[0] = long;
+                        match  v.replace(",","").parse::<T>() {
+                            Ok(v) => {
+                                    let long = v;
+                                    coor[0] = long;
+                                    },
+                            Err(e) => {
+                                    println!("Error while parsing {:?} at file {}",e,filename);
+                                    panic!();
+                            }
+                        }
+                       //let long = v.replace(",","").parse::<T>().unwrap();
+                        //coor[0] = long;
                    } else { //else this is a latitude coordinate
-                       let lat = v.parse::<T>().unwrap();
-                       coor[1] = lat;
-                       vec.push(coor);
+                       
+                       match v.parse::<T>() {
+                            Ok(v) => {
+                                    let lat = v;
+                                    coor[1] = lat;
+                                    vec.push(coor);
+                            },
+                            Err(e) => {
+                                    println!("Error while parsing {:?} at file {}",e,filename);
+                                    panic!();
+                            }
+                       }
                    }
                 }
             }
