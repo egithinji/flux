@@ -63,10 +63,10 @@ impl FeatureCollection {
 
     pub fn add_feature(&mut self, feature: Feature) -> std::io::Result<()> {
        //add a feature to this feature collection
-       //and update the locations.geojson and new_location.geojson files on the webserver.
+       //and update the locations.geojson and matches.txt files.
        
-       //update the new_location.geojson file
-       write_feature_to_file(&feature)?;
+       //update the matches.txt file
+       write_feature_to_file(&feature);
 
        //add the feature to this feature collection
        self.features.push(feature);
@@ -86,22 +86,7 @@ pub enum GeojsonType {
     Point
 }
 
-pub fn add_feature_to_collection(mut fc: FeatureCollection, feature: Feature) -> std::io::Result<()> {
-   //given a featurecollection and a feature,
-   //adds the feature to the feature collection, and updates the locations.geojson and
-   //new_location.geojson files on the webserver.
 
-   //update the new_location.geojson file
-   write_feature_to_file(&feature)?;
-
-   //add the feature to the feature collection
-   fc.features.push(feature);
-
-   //update the locations.geojson file
-   write_feature_collection_to_file(&fc)?;
-   
-   Ok(())
-}
 
 pub fn get_random_point_in_polygon(poly: Polygon<f64>) -> (f64, f64)  
 //First triangulates the polygon using delaunator triangulation.

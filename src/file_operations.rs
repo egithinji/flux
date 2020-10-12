@@ -16,11 +16,21 @@ use std::io::prelude::*;
 use std::collections::HashMap;
 
 
-//write a single feature to the web server
- pub fn write_feature_to_file(f: &Feature) -> std::io::Result<()> {
-    let file = File::create("new_location.geojson")?;
-    serde_json::to_writer(file, f)?;
-    Ok(())
+//Updates the matches.txt file
+ pub fn write_feature_to_file(f: &Feature) {
+    let mut file = OpenOptions::new()
+                .append(true)
+                .open("matches.txt")
+                .unwrap();
+
+    let posted_on = &f.properties.posted_on;
+    let text = &f.properties.text;
+    let id = &f.id;
+
+    if let Err(e) = writeln!(file, "Id: {}\nPosted on: {}\n Text: {}\n********************************", id, posted_on, text) {
+            eprintln!("Couldn't write feature to file: {}", e);
+    }
+    
 }
 
 //write a feature collection to the web server
