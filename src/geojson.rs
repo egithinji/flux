@@ -1,4 +1,5 @@
 use serde::{Deserialize, Serialize};
+use serde_json::Result;
 use crate::file_operations::write_feature_to_file;
 use crate::file_operations::write_feature_collection_to_file;
 use geo::LineString;
@@ -8,6 +9,7 @@ use geo::CoordinateType;
 use delaunator::Point as DelPoint;
 use delaunator::triangulate;
 use rand::Rng;
+use std::fs;
 
 //Corresponds to geojson geometry key
 #[derive(Serialize, Deserialize)]
@@ -19,8 +21,9 @@ pub struct Geometry {
 //Corresponds to geojson properties key
 #[derive(Serialize, Deserialize)]
 pub struct Properties {
-    pub title: String,
-    pub description: String,
+    pub text: String,
+    pub posted_on: String,
+    pub area: String,
 }
 
 //Corresponds to geojson feature
@@ -29,6 +32,7 @@ pub struct Feature {
     pub r#type: GeojsonType,
     pub geometry: Geometry,
     pub properties: Properties,
+    pub id: usize, //unique id for this feature
 }
 
 //Corresponds to geojson feature collection
@@ -45,6 +49,16 @@ impl FeatureCollection {
             r#type: GeojsonType::FeatureCollection,
             features: Vec::<Feature>::new(),
         }
+    }
+
+    pub fn from_file(filename: &str) -> Result<FeatureCollection> {
+        //Read the contents of the file containing the feature collection
+        let contents = fs::read_to_string(filename)
+            .expect("Something went wrong reading the feature collection file");
+
+        //Use serde_json to convert the string into json object
+        let fc: FeatureCollection = serde_json::from_str(&contents)?;
+        Ok(fc)
     }
 
     pub fn add_feature(&mut self, feature: Feature) -> std::io::Result<()> {

@@ -1,39 +1,66 @@
 use regex::Regex;
 use std::collections::HashMap;
 use geo::Polygon;
+use geo::algorithm::area::Area;
+use convert_case::{Case, Casing};
 
 pub fn match_location_description(text: &str, locations: &HashMap<String, Polygon<f64>>) -> Option<String> {
     //Checks whether any of the keys of the location_descriptions hashmap
     //are matched in the provided text.
-    //Adds all the matches to a vector.
-    //If there is more than one match, select the one with the most words
-    //and return it.
-    //The idea is that the match with more words is the more specific one.
-    //For example 'buru buru' and 'buru buru phase 1' will both be in the vector
+    //If there is more than one match, return the one with the smaller area.
+    //For example 'buru buru' and 'buru buru phase 1' might both be matched in a tweet
     //but 'buru buru phase 1' should be returned.
 
-    let mut descriptions: Vec<&str> = Vec::new();
+    //let mut descriptions: Vec<&str> = Vec::new();
+
+    let mut smallest = None;
+    let mut loc = None;
 
     for (description, polygon) in locations {
-        
-        let re = Regex::new(&description.to_lowercase()).unwrap();
-        if re.is_match(&text.to_lowercase()) {
+        //Match the description when it appears in the text of the tweet
+        //preceded or followed by the provided punctuation or when it is at 
+        //the beginning of the string.
+    
+        let desc = "(^|[ ,.?])".to_owned()+&description.to_case(Case::Lower)+"($|[ ,.!?])";
+        let re = Regex::new(&desc).unwrap();
+        if re.is_match(&text.to_case(Case::Lower)) {
+            
             println!("Found a match!");
-            descriptions.push(description);
+            
+            match smallest {
+                Some(v) => {
+                    if polygon.signed_area() < v {
+                        println!("Area of polygon is: {}",polygon.signed_area());
+                        smallest = Some(polygon.signed_area());
+                        loc = Some(description.to_owned());
+                    }
+                },
+                None => {
+                        println!("Area of polygon is: {}",polygon.signed_area());
+                        smallest = Some(polygon.signed_area());
+                        loc = Some(description.to_owned());
+                }
+            }
+            
+            //descriptions.push(description);
         }
         
     }
 
-    if descriptions.len() == 0 {
-        None
-    } else if descriptions.len() == 1 {
-        Some(descriptions[0].to_owned())
-    }else {
+    //if descriptions.len() == 0 {
+      //  None
+    //} else if descriptions.len() == 1 {
+      //  Some(descriptions[0].to_owned())
+    //}else {
         //return the longest description
-        Some(longest(descriptions))
-    }
+       // Some(longest(descriptions))
+    //}
+
+    loc
 
 }
+
+
 
 fn longest(list: Vec<&str>) -> String {
     let mut longest = "";

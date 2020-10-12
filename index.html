@@ -36,7 +36,7 @@
 	}	
 
       .mapboxgl-popup-content {
-  	text-align: center;
+  	text-align: left;
   	font-family: 'Open Sans', sans-serif;
 	}
 
@@ -141,7 +141,11 @@ map.on('load', function() {
     map.on('mouseenter', 'tweet-point', function(e) {
 	// Change the cursor style as a UI indicator.
 	map.getCanvas().style.cursor = 'pointer';	
-	popup.setLngLat(e.features[0].geometry.coordinates).setHTML('<b>Text:</b> ' + e.features[0].properties.description).addTo(map);
+	    popup.setLngLat(e.features[0].geometry.coordinates).setHTML(
+		    '<p align="left"><b>Tweeted at </b>' +e.features[0].properties.posted_on +'</p>' +
+		    '<p align="left"><b>Area: </b>' + e.features[0].properties.area +'</p>' +
+	    	    '<p align="left"><b>Tweet: </b>' + e.features[0].properties.text + '</p>'
+	    ).addTo(map);
     });
 
     map.on('mouseleave', 'tweet-point', function () {
@@ -151,12 +155,7 @@ map.on('load', function() {
 
 });
 
-//display the point
-//retrievePointToDisplay()
-
-//displayAllPointsCollected();
-
-//Regularly check the file server if there is a new point to display
+//Regularly check the file server for new points
 setInterval(function(){
     retrieveData()
 }, 5000)
@@ -170,7 +169,7 @@ function retrieveData() {
     xhttp.send();
     xhttp.onreadystatechange = function(map) {
         if(this.readyState == 4 && this.status == 200) {
-                //display the points on the map
+                //update the map
                 updateMap(this.responseText);
         }
     }

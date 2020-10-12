@@ -17,7 +17,8 @@ use futures::TryStreamExt;
 use egg_mode::stream::StreamMessage;
 use egg_mode;
 use flux::pattern_matching::match_location_description;
-
+use chrono::prelude::*;
+use std::env;
 
 const CONSUMER_SECRET: &str = "KPe3VuA3sddUEcE4BzsWGOG5s7B2VoerkN7CjJP3drHNqfAuyV";
 const CONSUMER_KEY: &str = "RLWbvzksHLHAZYDBhVc26SAEm";
@@ -28,8 +29,31 @@ const ACCESS_TOKEN: &str = "1253810304-jdIZtGSSvT6ngkUT4zIGo3Lfuvcad6l8wd387In";
 async fn main() {
 
 //Create a new feature collection and write it to the web server
+//let mut fc = FeatureCollection::new();
+
 let mut fc = FeatureCollection::new();
-write_feature_collection_to_file(&fc);
+
+let args: Vec<String> = env::args().collect();
+
+if args.len() == 1 {
+    //Normal operation of the program. Read the feature collection from the file
+    fc = FeatureCollection::from_file("locations.geojson").unwrap();
+} else {
+    //Read the argument
+    let arg = args[1].as_str();
+
+    match arg {
+        "refresh" => {
+            //Refresh the locations.geojson file by writing blank fc to the file.
+            write_feature_collection_to_file(&fc);
+        },
+        _ => {
+            panic!("Unrecognized argument");
+        }
+
+    }
+
+}
 
     
 let con_token = egg_mode::KeyPair::new(CONSUMER_KEY, CONSUMER_SECRET);
@@ -88,17 +112,21 @@ fn process_tweet(tweet: egg_mode::tweet::Tweet) -> Option<Feature> {
             //If a location_description is matched, get a random point in the corresponding polygon
             println!("Matched {}!",v);
 
-            //First get the polygon corresponding to the description
+            //Get the polygon corresponding to the location
             let poly = locations.get(&v).unwrap().to_owned();
 
             //Then get the random point
             let random_point = get_random_point_in_polygon(poly);
 
+            //Convert the created_at to local time
+            let local_time: DateTime<Local> = DateTime::from(tweet.created_at);
+            let lt_formatted = local_time.format("%R%P on %a %b %e").to_string();
             //Then create a flux tweet with all this information
             let new_tweet = Tweet {
                 location: [random_point.0, random_point.1],
-                title: format!("Tweeted at: {}",tweet.created_at),
-                description: tweet.text.to_owned(),
+                posted_on: lt_formatted,
+                text: tweet.text.to_owned(),
+                area: v,
             };
 
             //Convert the tweet to a Feature

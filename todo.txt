@@ -1,0 +1,6 @@
+1. Convert entire string to lower case using Case crate.
+2. Statistics to add:
+	- Top 5 areas
+	- Running total of complaints
+3. Refactor to allow generation of map per month, default the current month
+4. Multiple matches should return polygon with smaller area.
