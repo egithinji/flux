@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 80%;
+      }
+
+      #stats {
+	position: 
+      }
+
+      .marker {
+  	background-image: url('mapbox-icon.png');
+  	background-size: cover;
+  	width: 50px;
+  	height: 50px;
+  	border-radius: 50%;
+  	cursor: pointer;
+	}
+	
+      @keyframes fadein {from {opacity: 0;} to {opacity: 1;}}
+      .mapboxgl-popup {
+  	max-width: 200px;
+	animation: fadein 3s;
+	}	
+
+      .mapboxgl-popup-content {
+  	text-align: left;
+  	font-family: 'Open Sans', sans-serif;
+	}
+
+    </style>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+
+<div id='map'></div>
+<div id='stats'>
+   <p>Hello</p>
+</div>
+<script>
+
+//set up the map
+mapboxgl.accessToken = 'pk.eyJ1IjoiZXJpY2dpdGhpbmppIiwiYSI6ImNrZmM4ODFtbzE1dzEyd281ajkydjViMHMifQ.T_3ACROnINNaOH3PBSXujA';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/ericgithinji/ckfcmujs49j1v19oe4duz53oj',
+    center: [36.823, -1.289],
+    zoom: 12
+   });
+
+
+map.on('load', function() {
+
+    map.addSource('tweets', {
+	type: 'geojson',
+	data: './locations.geojson'
+    });
+
+    map.addLayer({
+	  id: 'tweet-heat',
+	  type: 'heatmap',
+	  source: 'tweets',
+	  maxzoom: 15,
+	  paint: {
+	    // increase intensity as zoom level increases
+	    'heatmap-intensity': {
+	      stops: [
+		[11, 1],
+		[15, 3]
+	      ]
+	    },
+	    // assign color values be applied to points depending on their density
+	    'heatmap-color': [
+	      'interpolate',
+	      ['linear'],
+	      ['heatmap-density'],
+	      0, 'rgba(0, 0, 255, 0)',
+	      0.1, 'royalblue',
+	      0.3, 'cyan',
+	      0.5, 'lime',
+	      0.7, 'yellow',
+	      1, 'red'
+	    ],
+	    // increase radius as zoom increases
+	    'heatmap-radius': {
+	      stops: [
+		[11, 15],
+		[15, 20]
+	      ]
+	    },
+	    // decrease opacity to transition into the circle layer
+	    'heatmap-opacity': {
+	      default: 1,
+	      stops: [
+		[14, 1],
+		[15, 0]
+	      ]
+	    },
+	  }
+}, 'waterway-label');
+
+   map.addLayer({
+  	id: 'tweet-point',
+  	type: 'circle',
+  	source: 'tweets',
+  	minzoom: 14,
+  	paint: {
+    	// increase the radius of the circle as the zoom level and dbh value increases
+    	'circle-radius': 10,
+	'circle-blur': 0.5,
+	'circle-color': 'red',
+    	'circle-stroke-color': 'white',
+    	'circle-stroke-width': 1,
+    	'circle-opacity': {
+      	stops: [
+        	[14, 0],
+        	[15, 1]
+      	]
+    	}
+  	}
+}, 'waterway-label');
+
+    //Create a popup, but don't add it to the map yet.
+    var popup = new mapboxgl.Popup({
+	closeButton: false,
+	closeOnClick: false
+    });
+
+    map.on('mouseenter', 'tweet-point', function(e) {
+	// Change the cursor style as a UI indicator.
+	map.getCanvas().style.cursor = 'pointer';	
+	    popup.setLngLat(e.features[0].geometry.coordinates).setHTML(
+		    '<p align="left"><b>Tweeted at </b>' +e.features[0].properties.posted_on +'</p>' +
+		    '<p align="left"><b>Area: </b>' + e.features[0].properties.area +'</p>' +
+	    	    '<p align="left"><b>Tweet: </b>' + e.features[0].properties.text + '</p>'
+	    ).addTo(map);
+    });
+
+    map.on('mouseleave', 'tweet-point', function () {
+	map.getCanvas().style.cursor = '';
+	popup.remove();
+    });
+
+});
+
+//Regularly check the file server for new points
+setInterval(function(){
+    retrieveData()
+}, 5000)
+
+
+function retrieveData() {
+    //use ajax to get the geojson file from the webserver
+    var xhttp = new XMLHttpRequest();
+    //adding date and time parameter to get request to prevent returning cached file
+    xhttp.open("GET", "locations.geojson?" + (new Date()).getTime(), true);
+    xhttp.send();
+    xhttp.onreadystatechange = function(map) {
+        if(this.readyState == 4 && this.status == 200) {
+                //update the map
+                updateMap(this.responseText);
+        }
+    }
+}
+
+function updateMap(points) {
+   //convert the text into a json object
+   var geojson = JSON.parse(points);
+   //update the map  
+   map.getSource('tweets').setData(geojson); 
+}
+
+</script>
+
+</body>
+</html>

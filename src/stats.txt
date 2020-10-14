@@ -1,0 +1,10 @@
+{
+  "top_today": "bamburi",
+  "top_3_this_month": [
+    "kikuyu",
+    "kabati",
+    "juja"
+  ],
+  "total_complaints_today": 4,
+  "total_complaints_this_month": 90
+}

@@ -7,6 +7,7 @@ use flux::file_operations::get_hashmap_of_locations;
 use flux::file_operations::write_unmatched_location;
 use flux::file_operations::write_feature_collection_to_file;
 use flux::geojson::get_random_point_in_polygon;
+use flux::statistics::Statistics;
 use geo::Polygon;
 use geo::Point;
 use geo::prelude::Contains;
@@ -27,6 +28,10 @@ const ACCESS_TOKEN: &str = "1253810304-jdIZtGSSvT6ngkUT4zIGo3Lfuvcad6l8wd387In";
 
 #[tokio::main]
 async fn main() {
+
+let stats = Statistics::new();
+stats.updateStats();
+
 
 //Create a new feature collection and write it to the web server
 //let mut fc = FeatureCollection::new();
@@ -120,7 +125,7 @@ fn process_tweet(tweet: egg_mode::tweet::Tweet) -> Option<Feature> {
 
             //Convert the created_at to local time
             let local_time: DateTime<Local> = DateTime::from(tweet.created_at);
-            let lt_formatted = local_time.format("%R%P on %a %b %e").to_string();
+            let lt_formatted = local_time.format("%R%P on %a %b %e %Y").to_string();
             //Then create a flux tweet with all this information
             let new_tweet = Tweet {
                 location: [random_point.0, random_point.1],
