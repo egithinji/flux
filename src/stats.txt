@@ -1,10 +1,10 @@
 {
-  "top_today": "bamburi",
+  "top_today": "bondo",
   "top_3_this_month": [
-    "kikuyu",
-    "kabati",
-    "juja"
+    "bondo",
+    "ruaka",
+    "meru"
   ],
   "total_complaints_today": 4,
-  "total_complaints_this_month": 90
+  "total_complaints_this_month": 4
 }

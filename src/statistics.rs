@@ -193,7 +193,7 @@ impl Statistics {
             Ok((v)) => {
                 println!("The stats look like this:\n {}", v);
                 //write the stats to the stats.txt file
-                let mut file = OpenOptions::new().write(true).open("stats.txt").expect("Something went wrong opening the stats file for writing.");
+                let mut file = File::create("stats.txt").expect("Something went wrong opening the stats file for writing.");
                 file.write_all(v.as_bytes()).expect("Something went wrong writing the stats.");
             },
             Err(_) => {
@@ -210,10 +210,10 @@ fn is_today(date: &str) -> bool {
 
     let mut words: Vec<&str> = date.split_whitespace().collect();
 
-    let expression = words[3].to_string() + " " + words[4];
+    let expression = words[3].to_string() + " " + words[4] + " " + words[5];
 
     //Format today's date into the above expression's format
-    let today = Local::today().format("%b %e").to_string();
+    let today = Local::today().format("%b %e %Y").to_string();
 
     if today == expression.to_string() {
         true

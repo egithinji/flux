@@ -52,7 +52,25 @@
 
 <div id='map'></div>
 <div id='stats'>
-   <p>Hello</p>
+   <h2>Area with most outages today</h2>
+   <p id="top_today">Area goes here</p>
+
+   <h2>Areas with most outages this month</h2>
+   <p>
+   	<ol>
+		<li id="area_1"></li>
+		<li id="area_2"></li>
+		<li id="area_3"></li>
+	</ol>
+   
+   </p>
+
+   <h2>Total outages today</h2>
+   <p id="total_today">Total goes here</p>
+
+   <h2>Total outages this month</h2>
+   <p id="total_this_month">Total goes here</p>
+
 </div>
 <script>
 
@@ -160,7 +178,7 @@ map.on('load', function() {
 
 });
 
-//Regularly check the file server for new points
+//Regularly check the file server for new points and new stats
 setInterval(function(){
     retrieveData()
 }, 5000)
@@ -178,6 +196,28 @@ function retrieveData() {
                 updateMap(this.responseText);
         }
     }
+
+
+    //use another ajax call to get the stats file from the webserver
+    var xhttp2 = new XMLHttpRequest();
+    xhttp2.open("GET", "stats.txt?" + (new Date()).getTime(), true);
+    xhttp2.send();
+    xhttp2.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 200) {
+        	//display the stats on the page
+		data = JSON.parse(this.responseText);
+		document.getElementById("top_today").innerHTML = data.top_today;
+		document.getElementById("area_1").innerHTML = data.top_3_this_month[0];
+		document.getElementById("area_2").innerHTML = data.top_3_this_month[1];
+		document.getElementById("area_3").innerHTML = data.top_3_this_month[2];
+		document.getElementById("total_today").innerHTML = data.total_complaints_today;
+		document.getElementById("total_this_month").innerHTML = data.total_complaints_this_month;
+
+
+	}
+    }
+
+
 }
 
 function updateMap(points) {
