@@ -1,1 +1,5 @@
 /target
+/src/consumer_key.txt
+/src/consumer_secret.txt
+/src/access_token_secret.txt
+/src/access_token.txt

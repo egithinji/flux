@@ -20,49 +20,45 @@ use egg_mode;
 use flux::pattern_matching::match_location_description;
 use chrono::prelude::*;
 use std::env;
+use flux::config::Config;
 
-const CONSUMER_SECRET: &str = "KPe3VuA3sddUEcE4BzsWGOG5s7B2VoerkN7CjJP3drHNqfAuyV";
-const CONSUMER_KEY: &str = "RLWbvzksHLHAZYDBhVc26SAEm";
-const ACCESS_TOKEN_SECRET: &str = "5xbJrYXKer89YvsuHIWzJzSpW45wlz8JwSL9X5uuTuWxW";
-const ACCESS_TOKEN: &str = "1253810304-jdIZtGSSvT6ngkUT4zIGo3Lfuvcad6l8wd387In";
 
 #[tokio::main]
 async fn main() {
 
-let stats = Statistics::new();
+    let stats = Statistics::new();
 
 
-let mut fc = FeatureCollection::new();
+    let mut fc = FeatureCollection::new();
 
-let args: Vec<String> = env::args().collect();
+    let args: Vec<String> = env::args().collect();
 
-if args.len() == 1 {
-    //Normal operation of the program. Read the feature collection from the file
-    fc = FeatureCollection::from_file("locations.geojson").unwrap();
-    stats.updateStats();
-} else {
-    //Read the argument
-    let arg = args[1].as_str();
+    if args.len() == 1 {
+        //Normal operation of the program. Read the feature collection from the file
+        fc = FeatureCollection::from_file("locations.geojson").unwrap();
+        stats.updateStats();
+    } else {
+        //Read the argument
+        let arg = args[1].as_str();
 
-    match arg {
-        "refresh" => {
-            //Refresh the locations.geojson file by writing blank fc to the file.
-            write_feature_collection_to_file(&fc);
-            stats.updateStats();
-        },
-        _ => {
-            panic!("Unrecognized argument");
+        match arg {
+            "refresh" => {
+                //Refresh the locations.geojson file by writing blank fc to the file.
+                write_feature_collection_to_file(&fc);
+                stats.updateStats();
+            },
+            _ => {
+                panic!("Unrecognized argument");
+            }
+
         }
 
     }
 
-}
-
     
-let con_token = egg_mode::KeyPair::new(CONSUMER_KEY, CONSUMER_SECRET);
-let acc_token = egg_mode::KeyPair::new(ACCESS_TOKEN, ACCESS_TOKEN_SECRET);
+    let config = Config::new();
+    let token = egg_mode::auth::Token::Access{consumer: config.con_token, access: config.acc_token};
 
-    let token = egg_mode::auth::Token::Access{consumer: con_token, access: acc_token};
     println!("Live streaming tweets...");
 
     println!("Ctrl-C to quit\n");
