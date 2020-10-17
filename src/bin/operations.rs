@@ -1,6 +1,7 @@
 use std::env;
 use flux::geojson::FeatureCollection;
 use flux::file_operations::write_feature_collection_to_file;
+use flux::statistics::Statistics;
 
 
 
@@ -53,6 +54,11 @@ fn delete_feature(feature_id: usize) -> Result<(),String>{
         fc.features = features;
         //write the adjusted feature collection to the locations.geojson file
         write_feature_collection_to_file(&fc);
+
+        //update the statistics
+        let stats = Statistics::new();
+        stats.updateStats();
+
         println!("Feature successfully removed. New size of feature collection: {}", fc.features.len());
         Ok(())
     } else {

@@ -8,6 +8,7 @@ use serde_json::Result;
 use std::fs::OpenOptions;
 use std::fs::File;
 use std::io::Write;
+use convert_case::{Case, Casing};
 
 #[derive(Serialize)]
 pub struct Statistics {
@@ -99,7 +100,7 @@ impl Statistics {
 
         println!("The top area today is {}", top_today);
 
-        self.top_today = top_today;
+        self.top_today = top_today.to_case(Case::Title);
 
         self
     }
@@ -131,7 +132,7 @@ impl Statistics {
                 break;
             }
            //TODO: This compiles but can't be the correct way of doing this. 
-            top_3.push(entry.0.to_owned().to_owned());
+            top_3.push(entry.0.to_owned().to_owned().to_case(Case::Title));
             count = count + 1;
         }
 

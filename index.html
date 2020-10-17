@@ -8,21 +8,32 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
     <style>
+
       body {
+
         margin: 0;
         padding: 0;
+	background-color: black;
+	color: white;
+	font-family: Tahoma, Geneva, sans-serif;
+
       }
 
-      #map {
-	position: absolute;
-	width: 80%;
-	top: 0;
-	bottom: 0;
+      ol {
+	padding: 20px;
       }
 
       #stats {
-	float:right;
-	width: 20%;
+	margin-left: 20px;
+      }
+
+      #map {
+	width: 90%;
+	height: 800px;
+	//top: 0;
+	//bottom: 0;
+	margin-right: auto;
+	margin-left: 20px;
       }
 
       .marker {
@@ -43,35 +54,67 @@
       .mapboxgl-popup-content {
   	text-align: left;
   	font-family: 'Open Sans', sans-serif;
+	color: black;
 	}
+
+      .center_img {
+	  display: block;
+	  margin-left: auto;
+          margin-right: auto;
+	  margin-top: 10px;
+	  margin-bottom: 50px;
+	  width: 150px;
+	  
+      }
+
+      .left_img {
+	 display: block;
+         margin-left: 10px;
+	 width: 150px;
+   	 margin-top: 10px;
+	 margin-bottom: 50px;
+      }
+
+      .footer {
+	 position: relative;
+	 left: 0;
+	 margin-bottom: 0px;
+	 bottom: 0px;
+	 width: 100%;
+	 text-align: center;
+	 font-size: small;
+      }
+
+      .data {
+	 color: #ff9e36; 
+      }
+
 
     </style>
     <script src="jquery-3.5.1.min.js"></script>
 </head>
 <body>
 
-<div id='map'></div>
 <div id='stats'>
-   <h2>Area with most outages today</h2>
-   <p id="top_today">Area goes here</p>
 
-   <h2>Areas with most outages this month</h2>
-   <p>
-   	<ol>
-		<li id="area_1"></li>
-		<li id="area_2"></li>
-		<li id="area_3"></li>
-	</ol>
+
+
+   <p>This website tracks (in realtime) power outage complaints directed at the official KPLC twitter handle (@KenyaPower_Care) and visualizes them on a map.</p>
+  
+   <p id="total_today"></p>
    
-   </p>
+   <p id="top_today"></p>
+   
+   <p id="total_this_month"></p>
 
-   <h2>Total outages today</h2>
-   <p id="total_today">Total goes here</p>
+   <p id="top3"></p>
 
-   <h2>Total outages this month</h2>
-   <p id="total_this_month">Total goes here</p>
 
 </div>
+
+<div id='map'></div>
+
+
 <script>
 
 //set up the map
@@ -80,7 +123,7 @@ var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/ericgithinji/ckfcmujs49j1v19oe4duz53oj',
     center: [36.823, -1.289],
-    zoom: 12
+    zoom: 5
    });
 
 
@@ -165,9 +208,9 @@ map.on('load', function() {
 	// Change the cursor style as a UI indicator.
 	map.getCanvas().style.cursor = 'pointer';	
 	    popup.setLngLat(e.features[0].geometry.coordinates).setHTML(
-		    '<p align="left"><b>Tweeted at </b>' +e.features[0].properties.posted_on +'</p>' +
-		    '<p align="left"><b>Area: </b>' + e.features[0].properties.area +'</p>' +
-	    	    '<p align="left"><b>Tweet: </b>' + e.features[0].properties.text + '</p>'
+		    "<p align='left'><b>Tweeted at </b>" +e.features[0].properties.posted_on +"</p>" +
+		    "<p align='left'><b>Area: </b>" + e.features[0].properties.area +"</p>" +
+	    	    "<p align='left'><b>Tweet: </b>" + e.features[0].properties.text + "</p>"
 	    ).addTo(map);
     });
 
@@ -206,12 +249,9 @@ function retrieveData() {
         if(this.readyState == 4 && this.status == 200) {
         	//display the stats on the page
 		data = JSON.parse(this.responseText);
-		document.getElementById("top_today").innerHTML = data.top_today;
-		document.getElementById("area_1").innerHTML = data.top_3_this_month[0];
-		document.getElementById("area_2").innerHTML = data.top_3_this_month[1];
-		document.getElementById("area_3").innerHTML = data.top_3_this_month[2];
-		document.getElementById("total_today").innerHTML = data.total_complaints_today;
-		document.getElementById("total_this_month").innerHTML = data.total_complaints_this_month;
+		document.getElementById("top_today").innerHTML = "Most complaints <b>today</b> are coming from <b><span class='data'>"+ data.top_today + "</span></b>.";
+		document.getElementById("top3").innerHTML = "This month, most complaints are coming from <b><span class='data'>" + data.top_3_this_month[0] + "</span></b>, <span class='data'><b>" + data.top_3_this_month[1] + "</span></b>, and <span class='data'><b>" + data.top_3_this_month[2] + "</span></b>.";
+		document.getElementById("total_today").innerHTML = "<b><span class='data'>" + data.total_complaints_today + "</span></b> complaints have been captured <b>today</b>.";
 
 
 	}
@@ -229,5 +269,10 @@ function updateMap(points) {
 
 </script>
 
+
 </body>
+<div class="footer">
+	<p>Copyright 2020 &copy Bletchley Park Ltd. <a href="mailto:info@bletchleypark.africa">Email</a></p>
+</div>
+
 </html>

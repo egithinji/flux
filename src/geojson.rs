@@ -10,6 +10,7 @@ use delaunator::Point as DelPoint;
 use delaunator::triangulate;
 use rand::Rng;
 use std::fs;
+use crate::statistics::Statistics;
 
 //Corresponds to geojson geometry key
 #[derive(Serialize, Deserialize)]
@@ -73,7 +74,12 @@ impl FeatureCollection {
 
        //update the locations.geojson file
        write_feature_collection_to_file(self)?;
-    
+
+       //update the statistics
+       let stats = Statistics::new();
+       stats.updateStats();
+
+
        Ok(())
     }
 }

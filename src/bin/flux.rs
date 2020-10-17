@@ -30,11 +30,7 @@ const ACCESS_TOKEN: &str = "1253810304-jdIZtGSSvT6ngkUT4zIGo3Lfuvcad6l8wd387In";
 async fn main() {
 
 let stats = Statistics::new();
-stats.updateStats();
 
-
-//Create a new feature collection and write it to the web server
-//let mut fc = FeatureCollection::new();
 
 let mut fc = FeatureCollection::new();
 
@@ -43,6 +39,7 @@ let args: Vec<String> = env::args().collect();
 if args.len() == 1 {
     //Normal operation of the program. Read the feature collection from the file
     fc = FeatureCollection::from_file("locations.geojson").unwrap();
+    stats.updateStats();
 } else {
     //Read the argument
     let arg = args[1].as_str();
@@ -51,6 +48,7 @@ if args.len() == 1 {
         "refresh" => {
             //Refresh the locations.geojson file by writing blank fc to the file.
             write_feature_collection_to_file(&fc);
+            stats.updateStats();
         },
         _ => {
             panic!("Unrecognized argument");
