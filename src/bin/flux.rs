@@ -127,7 +127,7 @@ fn process_tweet(tweet: egg_mode::tweet::Tweet) -> Option<Feature> {
             let new_tweet = Tweet {
                 location: [random_point.0, random_point.1],
                 posted_on: lt_formatted,
-                text: text.to_owned(),
+                text: tweet.text.to_owned(),
                 area: v,
             };
 
