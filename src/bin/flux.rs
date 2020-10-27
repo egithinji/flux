@@ -95,8 +95,11 @@ fn process_tweet(tweet: egg_mode::tweet::Tweet) -> Option<Feature> {
     //We want to check if the text of the tweet contains any of the location descriptions we have on
     //file.
     
+    //First, strip the text of non-ascii characters.
+    let text = pattern_matching::convert_to_ascii(&tweet.text);
+    
     //First of all, we're not interested in retweets
-    if pattern_matching::is_retweet(&tweet.text) {
+    if pattern_matching::is_retweet(&text) {
         return None
     }
    
@@ -104,7 +107,7 @@ fn process_tweet(tweet: egg_mode::tweet::Tweet) -> Option<Feature> {
     let locations = get_hashmap_of_locations();
 
     //Attempt to find a location description in the tweet's text
-    let description = match_location_description(&tweet.text, &locations);
+    let description = match_location_description(&text, &locations);
 
     match description {
         Some(v) => {
@@ -124,7 +127,7 @@ fn process_tweet(tweet: egg_mode::tweet::Tweet) -> Option<Feature> {
             let new_tweet = Tweet {
                 location: [random_point.0, random_point.1],
                 posted_on: lt_formatted,
-                text: tweet.text.to_owned(),
+                text: text.to_owned(),
                 area: v,
             };
 
@@ -136,7 +139,7 @@ fn process_tweet(tweet: egg_mode::tweet::Tweet) -> Option<Feature> {
         },
         None => {
             println!("No location matched.");
-            write_unmatched_location(&tweet.text);
+            write_unmatched_location(&text);
             None
         }
     }

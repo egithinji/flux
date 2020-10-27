@@ -42,19 +42,9 @@ pub fn match_location_description(text: &str, locations: &HashMap<String, Polygo
                 }
             }
             
-            //descriptions.push(description);
         }
         
     }
-
-    //if descriptions.len() == 0 {
-      //  None
-    //} else if descriptions.len() == 1 {
-      //  Some(descriptions[0].to_owned())
-    //}else {
-        //return the longest description
-       // Some(longest(descriptions))
-    //}
 
     loc
 
@@ -77,4 +67,12 @@ pub fn is_retweet(text: &str) -> bool {
     //Checks if the tweet is a retweet (beginning with 'RT')
     let re = Regex::new(r"^RT").unwrap();
     re.is_match(text)
+}
+
+pub fn convert_to_ascii(text: &str) -> String {
+    //strips the provided text of non-ascii characters
+
+    let n = text.replace(|c: char| !c.is_ascii(), "");
+    n
+
 }

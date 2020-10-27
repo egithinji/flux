@@ -25,6 +25,8 @@
 
       #stats {
 	margin-left: 20px;
+	max-width: 500px;
+	justify-content: center;
       }
 
       #map {
@@ -99,7 +101,7 @@
 
 
 
-   <p>This website tracks (in realtime) power outage complaints directed at the official KPLC twitter handle (@KenyaPower_Care) and visualizes them on a map.</p>
+   <p>This website tracks (in realtime) power outage complaints directed at the official Kenya Power and Lighting Company Twitter handle (@KenyaPower_Care) and visualizes them on a map.</p>
   
    <p id="total_today"></p>
    
@@ -249,9 +251,11 @@ function retrieveData() {
         if(this.readyState == 4 && this.status == 200) {
         	//display the stats on the page
 		data = JSON.parse(this.responseText);
-		document.getElementById("top_today").innerHTML = "Most complaints <b>today</b> are coming from <b><span class='data'>"+ data.top_today + "</span></b>.";
-		document.getElementById("top3").innerHTML = "This month, most complaints are coming from <b><span class='data'>" + data.top_3_this_month[0] + "</span></b>, <span class='data'><b>" + data.top_3_this_month[1] + "</span></b>, and <span class='data'><b>" + data.top_3_this_month[2] + "</span></b>.";
+		
 		document.getElementById("total_today").innerHTML = "<b><span class='data'>" + data.total_complaints_today + "</span></b> complaints have been captured <b>today</b>.";
+		document.getElementById("top_today").innerHTML = "Most complaints <b>today</b> are coming from <b><span class='data'>"+ data.top_today + "</span></b>.";
+		document.getElementById("total_this_month").innerHTML = "A total of <b><span class='data'>" + data.total_complaints_this_month + "</span></b> complaints have been captured this month.";
+		document.getElementById("top3").innerHTML = "This month, most complaints are coming from <b><span class='data'>" + data.top_3_this_month[0] + "</span></b>, <span class='data'><b>" + data.top_3_this_month[1] + "</span></b>, and <span class='data'><b>" + data.top_3_this_month[2] + "</span></b>.";
 
 
 	}
