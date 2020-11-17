@@ -34,11 +34,25 @@ use std::collections::HashMap;
 }
 
 //write a feature collection to the web server
-pub fn write_feature_collection_to_file(f: &FeatureCollection) -> std::io::Result<()> {
-    let file = File::create("locations.geojson")?;
-    serde_json::to_writer(file, f)?;
-    Ok(())
-}
+pub fn write_feature_collection_to_file(f: &FeatureCollection, dest: &str) -> std::io::Result<()> {
+    
+    match dest {
+        "locations.geojson" => {
+            let file = File::create("locations.geojson")?;
+            serde_json::to_writer(file, f)?;
+            Ok(())
+        },
+        "today_locations.geojson" => {
+            let file = File::create("today_locations.geojson")?;
+            serde_json::to_writer(file, f)?;
+            Ok(())
+        },
+        _ => {
+            panic!("Enter a valid filename, either locations.geojson or today_locations.geojson");
+        }
+    }
+    
+    }
 
 //Reads a file that contains a series of coordinates in the format [lat,long],[lat,long],[lat,long]... and returns a Polygon object
 pub fn get_polygon_from_file<T>(filename: &str, default_long: T, default_lat: T) -> Polygon<T>

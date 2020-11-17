@@ -28,14 +28,17 @@ async fn main() {
 
     let stats = Statistics::new();
 
-
-    let mut fc = FeatureCollection::new();
+    //the main feature collection containing all complaints in the month
+    let mut fc = FeatureCollection::new("locations.geojson".to_string());
+    //the feature collection containing only complaints for today
+    let mut fc2 = FeatureCollection::new("today_locations.geojson".to_string());
 
     let args: Vec<String> = env::args().collect();
 
     if args.len() == 1 {
-        //Normal operation of the program. Read the feature collection from the file
+        //Normal operation of the program. Read the feature collections from the file
         fc = FeatureCollection::from_file("locations.geojson").unwrap();
+        fc2 = FeatureCollection::from_file("today_locations.geojson").unwrap();
         stats.updateStats();
     } else {
         //Read the argument
@@ -43,8 +46,9 @@ async fn main() {
 
         match arg {
             "refresh" => {
-                //Refresh the locations.geojson file by writing blank fc to the file.
-                write_feature_collection_to_file(&fc);
+                //Refresh the locations.geojson and today_locations.geojson files by writing blank fc to the file.
+                write_feature_collection_to_file(&fc,"locations.geojson");
+                write_feature_collection_to_file(&fc2,"today_locations.geojson");
                 stats.updateStats();
             },
             _ => {
@@ -73,7 +77,10 @@ async fn main() {
                 println!("-----------------------------------");
                 match process_tweet(tweet) {
                     Some(f) => {
-                        fc.add_feature(f);
+                        //add the feature to the both feature collections (for the month and for
+                        //today)
+                        fc.add_feature(f.clone());
+                        fc2.add_feature(f);
                     },
                     None => {}
                 }
@@ -122,7 +129,7 @@ fn process_tweet(tweet: egg_mode::tweet::Tweet) -> Option<Feature> {
 
             //Convert the created_at to local time
             let local_time: DateTime<Local> = DateTime::from(tweet.created_at);
-            let lt_formatted = local_time.format("%R%P on %a %b %e %Y").to_string();
+            let lt_formatted = local_time.format("%R%P on %a %b %d %Y").to_string();
             //Then create a flux tweet with all this information
             let new_tweet = Tweet {
                 location: [random_point.0, random_point.1],

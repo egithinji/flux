@@ -214,7 +214,7 @@ fn is_today(date: &str) -> bool {
     let expression = words[3].to_string() + " " + words[4] + " " + words[5];
 
     //Format today's date into the above expression's format
-    let today = Local::today().format("%b %e %Y").to_string();
+    let today = Local::today().format("%b %d %Y").to_string();
 
     if today == expression.to_string() {
         true

@@ -1,0 +1,6 @@
+{
+  "top_today": "",
+  "top_3_this_month": [],
+  "total_complaints_today": 0,
+  "total_complaints_this_month": 0
+}

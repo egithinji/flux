@@ -29,6 +29,12 @@
 	justify-content: center;
       }
 
+      #buttons {
+	margin-left: 20px;
+	max-width: 500px;
+	justify-content: center;
+      }
+
       #map {
 	width: 90%;
 	height: 800px;
@@ -114,6 +120,12 @@
 
 </div>
 
+<div id='buttons'>
+
+	<p>Display map for: <button type="button" onclick="setSourceToday()"><b>Today</b></button> <button type="button" onclick="setSourceThisMonth()"><b>This month</b></button> </p>
+
+</div>
+
 <div id='map'></div>
 
 
@@ -128,12 +140,15 @@ var map = new mapboxgl.Map({
     zoom: 5
    });
 
+//variable for determining which source to use (either this months feature collection or today's feature collection)
+var source = './locations.geojson';
+
 
 map.on('load', function() {
 
     map.addSource('tweets', {
 	type: 'geojson',
-	data: './locations.geojson'
+	data: source
     });
 
     map.addLayer({
@@ -225,7 +240,7 @@ map.on('load', function() {
 
 //Regularly check the file server for new points and new stats
 setInterval(function(){
-    retrieveData()
+    //retrieveData()
 }, 5000)
 
 
@@ -233,7 +248,8 @@ function retrieveData() {
     //use ajax to get the geojson file from the webserver
     var xhttp = new XMLHttpRequest();
     //adding date and time parameter to get request to prevent returning cached file
-    xhttp.open("GET", "locations.geojson?" + (new Date()).getTime(), true);
+    //xhttp.open("GET", "./today_locations.geojson" + (new Date()).getTime(), true);
+    xhttp.open("GET", source, true);
     xhttp.send();
     xhttp.onreadystatechange = function(map) {
         if(this.readyState == 4 && this.status == 200) {
@@ -270,6 +286,19 @@ function updateMap(points) {
    //update the map  
    map.getSource('tweets').setData(geojson); 
 }
+
+//Set the source data for the map to be today's data
+function setSourceToday() {
+    source = './today_locations.geojson';
+    retrieveData();
+}
+
+//Set the source data for the map to be this month's data
+function setSourceThisMonth() {
+    source = './locations.geojson';
+    retrieveData();
+}
+
 
 </script>
 

@@ -14,6 +14,7 @@ use crate::statistics::Statistics;
 
 //Corresponds to geojson geometry key
 #[derive(Serialize, Deserialize)]
+#[derive(Clone)]
 pub struct Geometry {
     pub r#type: GeojsonType,
     pub coordinates: [f64;2],
@@ -21,6 +22,7 @@ pub struct Geometry {
 
 //Corresponds to geojson properties key
 #[derive(Serialize, Deserialize)]
+#[derive(Clone)]
 pub struct Properties {
     pub text: String,
     pub posted_on: String,
@@ -29,6 +31,7 @@ pub struct Properties {
 
 //Corresponds to geojson feature
 #[derive(Serialize, Deserialize)]
+#[derive(Clone)]
 pub struct Feature {
     pub r#type: GeojsonType,
     pub geometry: Geometry,
@@ -41,14 +44,17 @@ pub struct Feature {
 pub struct FeatureCollection {
     pub r#type: GeojsonType,
     pub features: Vec<Feature>,
+    #[serde(skip)]
+    pub file_name: String,
 }
 
 //Creates a new feature collection with no features
 impl FeatureCollection {
-    pub fn new() -> FeatureCollection {
+    pub fn new(fname: String) -> FeatureCollection {
         FeatureCollection {
             r#type: GeojsonType::FeatureCollection,
             features: Vec::<Feature>::new(),
+            file_name: fname,
         }
     }
 
@@ -58,7 +64,8 @@ impl FeatureCollection {
             .expect("Something went wrong reading the feature collection file");
 
         //Use serde_json to convert the string into json object
-        let fc: FeatureCollection = serde_json::from_str(&contents)?;
+        let mut fc: FeatureCollection = serde_json::from_str(&contents)?;
+        fc.file_name = filename.to_string();
         Ok(fc)
     }
 
@@ -72,8 +79,8 @@ impl FeatureCollection {
        //add the feature to this feature collection
        self.features.push(feature);
 
-       //update the locations.geojson file
-       write_feature_collection_to_file(self)?;
+       //update either the locations.geojson or today_locations.geojson file
+       write_feature_collection_to_file(self,&self.file_name)?;
 
        //update the statistics
        let stats = Statistics::new();
@@ -86,6 +93,7 @@ impl FeatureCollection {
 
 //Used when specifying a type as a point, feature, or feature collection
 #[derive(Serialize, Deserialize)]
+#[derive(Clone)]
 pub enum GeojsonType {
     FeatureCollection,
     Feature,
