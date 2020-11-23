@@ -74,7 +74,11 @@ impl FeatureCollection {
        //and update the locations.geojson and matches.txt files.
        
        //update the matches.txt file
-       write_feature_to_file(&feature);
+       //(but only if this is the main feature collection, otherwise we'll have double entries for
+       //every feature matched)
+       if &self.file_name == "locations.geojson" {
+           write_feature_to_file(&feature);
+       }
 
        //add the feature to this feature collection
        self.features.push(feature);

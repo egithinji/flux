@@ -226,8 +226,8 @@ map.on('load', function() {
 	map.getCanvas().style.cursor = 'pointer';	
 	    popup.setLngLat(e.features[0].geometry.coordinates).setHTML(
 		    "<p align='left'><b>Tweeted at </b>" +e.features[0].properties.posted_on +"</p>" +
-		    "<p align='left'><b>Area: </b>" + e.features[0].properties.area +"</p>" +
-	    	    "<p align='left'><b>Tweet: </b>" + e.features[0].properties.text + "</p>"
+		    "<p align='left'><b>Area: </b>" + e.features[0].properties.area +"</p>" 
+		    //+ "<p align='left'><b>Tweet: </b>" + e.features[0].properties.text + "</p>"
 	    ).addTo(map);
     });
 
@@ -239,18 +239,19 @@ map.on('load', function() {
 });
 
 //Regularly check the file server for new points and new stats
-//setInterval(function(){
-    //retrieveData()
-//}, 5000)
+setInterval(function(){
+    retrieveData()
+}, 5000)
 
 retrieveData();
 
 function retrieveData() {
     //use ajax to get the geojson file from the webserver
     var xhttp = new XMLHttpRequest();
+    var timestamp = (new Date()).getTime();
     //adding date and time parameter to get request to prevent returning cached file
-    //xhttp.open("GET", "./today_locations.geojson" + (new Date()).getTime(), true); I initially added the timestamp to prevent cached results but it started throwing an error so page is static for now
-    xhttp.open("GET", source, true);
+    //xhttp.open("GET", source + (new Date()).getTime(), true); //I initially added the timestamp to prevent cached results but it started throwing an error
+    xhttp.open("GET", source + "?" + timestamp, true);
     xhttp.send();
     xhttp.onreadystatechange = function(map) {
         if(this.readyState == 4 && this.status == 200) {

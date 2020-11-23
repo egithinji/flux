@@ -1,10 +1,9 @@
 {
-  "top_today": "Buruburu",
+  "top_today": "Highrise",
   "top_3_this_month": [
-    "Rongai",
-    "Langata",
+    "Highrise",
     "Muthiga"
   ],
-  "total_complaints_today": 9,
-  "total_complaints_this_month": 256
+  "total_complaints_today": 2,
+  "total_complaints_this_month": 2
 }
