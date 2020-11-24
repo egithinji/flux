@@ -17,6 +17,7 @@ use egg_mode::search::{self, ResultType};
 use futures::TryStreamExt;
 use egg_mode::stream::StreamMessage;
 use egg_mode;
+use egg_mode::user::TwitterUser;
 use flux::pattern_matching::match_location_description;
 use chrono::prelude::*;
 use std::env;
@@ -130,11 +131,24 @@ fn process_tweet(tweet: egg_mode::tweet::Tweet) -> Option<Feature> {
             //Convert the created_at to local time
             let local_time: DateTime<Local> = DateTime::from(tweet.created_at);
             let lt_formatted = local_time.format("%R%P on %a %b %d %Y").to_string();
+
+            //Get the id of the user who tweeted
+            let mut uid = 0; 
+            match tweet.user {
+            
+                Some(b) => {
+                        uid = b.id;
+                },
+                None => {}
+            }
+
+
             //Then create a flux tweet with all this information
             let new_tweet = Tweet {
                 location: [random_point.0, random_point.1],
                 posted_on: lt_formatted,
                 text: tweet.text.to_owned(),
+                user_id: uid,
                 area: v,
             };
 

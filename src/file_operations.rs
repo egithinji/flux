@@ -26,8 +26,9 @@ use std::collections::HashMap;
     let posted_on = &f.properties.posted_on;
     let text = &f.properties.text;
     let id = &f.id;
+    let uid = &f.properties.user_id;
 
-    if let Err(e) = writeln!(file, "Id: {}\nPosted on: {}\n Text: {}\n********************************", id, posted_on, text) {
+    if let Err(e) = writeln!(file, "Id: {}\nUser Id: {}\nPosted on: {}\n Text: {}\n********************************", id, uid, posted_on, text) {
             eprintln!("Couldn't write feature to file: {}", e);
     }
     
@@ -39,12 +40,12 @@ pub fn write_feature_collection_to_file(f: &FeatureCollection, dest: &str) -> st
     match dest {
         "locations.geojson" => {
             let file = File::create("locations.geojson")?;
-            serde_json::to_writer(file, f)?;
+            serde_json::to_writer_pretty(file, f)?;
             Ok(())
         },
         "today_locations.geojson" => {
             let file = File::create("today_locations.geojson")?;
-            serde_json::to_writer(file, f)?;
+            serde_json::to_writer_pretty(file, f)?;
             Ok(())
         },
         _ => {
@@ -52,7 +53,8 @@ pub fn write_feature_collection_to_file(f: &FeatureCollection, dest: &str) -> st
         }
     }
     
-    }
+}
+
 
 //Reads a file that contains a series of coordinates in the format [lat,long],[lat,long],[lat,long]... and returns a Polygon object
 pub fn get_polygon_from_file<T>(filename: &str, default_long: T, default_lat: T) -> Polygon<T>

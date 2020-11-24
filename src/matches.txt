@@ -1500,3 +1500,18 @@ Id: 351
 Posted on: 15:08pm on Mon Nov 23 2020
  Text: @KenyaPower_Care kindly assist Muthiga area.. Some lines have power outage since 1pm.
 ********************************
+Id: 352
+User Id: 1192239650
+Posted on: 14:50pm on Tue Nov 24 2020
+ Text: @KenyaPower_Care pls restore power back in Wangige busy town...
+********************************
+Id: 353
+User Id: 1326163816481239040
+Posted on: 14:53pm on Tue Nov 24 2020
+ Text: @KenyaPower_Care no power at Epic Ridge, Lower kabete  kindly assist.
+********************************
+Id: 354
+User Id: 448278024
+Posted on: 15:05pm on Tue Nov 24 2020
+ Text: @KenyaPower_Care Power outage in Ruaka, Lane 26 for the past 1 hour
+********************************

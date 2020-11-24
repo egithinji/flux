@@ -11,6 +11,7 @@ pub struct Tweet {
     pub location: [f64;2],
     pub posted_on: String,
     pub text: String,
+    pub user_id: u64,
     pub area: String,
 }
 
@@ -28,6 +29,7 @@ impl Tweet {
             posted_on: self.posted_on,
             text: self.text,
             area: self.area,
+            user_id: self.user_id,
         };
 
         //get the current tweet count, increment by one to get

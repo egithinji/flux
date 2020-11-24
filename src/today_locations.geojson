@@ -1,1 +1,90 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[36.803308044956964,-1.3157084411735558]},"properties":{"text":"@KenyaPower_Care @MwangiNjau2 This is the 10th day we are experiencing power shortage and NO SIGNS of your Wokers in the Area yet .we've been coming to your office in town everyday you keep Lying that it'll be repaired. RAILWAYS PHASE 3. . Mbagathi, Langata Highrise. Kindly, DO YOUR JOB.","posted_on":"15:00pm on Mon Nov 23 2020","area":"highrise"},"id":350},{"type":"Feature","geometry":{"type":"Point","coordinates":[36.68580961684189,-1.2554972814577323]},"properties":{"text":"@KenyaPower_Care kindly assist Muthiga area.. Some lines have power outage since 1pm.","posted_on":"15:08pm on Mon Nov 23 2020","area":"muthiga"},"id":351}]}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.80330804495696,
+          -1.3157084411735558
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @MwangiNjau2 This is the 10th day we are experiencing power shortage and NO SIGNS of your Wokers in the Area yet .we've been coming to your office in town everyday you keep Lying that it'll be repaired. RAILWAYS PHASE 3. . Mbagathi, Langata Highrise. Kindly, DO YOUR JOB.",
+        "posted_on": "15:00pm on Mon Nov 23 2020",
+        "area": "highrise",
+        "user_id": 0
+      },
+      "id": 350
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.68580961684189,
+          -1.2554972814577323
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care kindly assist Muthiga area.. Some lines have power outage since 1pm.",
+        "posted_on": "15:08pm on Mon Nov 23 2020",
+        "area": "muthiga",
+        "user_id": 0
+      },
+      "id": 351
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.71340544560201,
+          -1.2224270508364847
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care pls restore power back in Wangige busy town...",
+        "posted_on": "14:50pm on Tue Nov 24 2020",
+        "area": "wangige",
+        "user_id": 1192239650
+      },
+      "id": 352
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.72218862313882,
+          -1.231896027838037
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power at Epic Ridge, Lower kabete  kindly assist.",
+        "posted_on": "14:53pm on Tue Nov 24 2020",
+        "area": "lower kabete",
+        "user_id": 1326163816481239040
+      },
+      "id": 353
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78731643060356,
+          -1.2131782934509552
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Power outage in Ruaka, Lane 26 for the past 1 hour",
+        "posted_on": "15:05pm on Tue Nov 24 2020",
+        "area": "ruaka",
+        "user_id": 448278024
+      },
+      "id": 354
+    }
+  ]
+}
