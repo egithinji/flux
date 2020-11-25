@@ -240,7 +240,6 @@ kitengela => polygons/kitengela.txt
 muranga => polygons/muranga.txt
 maragua => polygons/maragua.txt
 muthiga => polygons/muthiga.txt
-thika => polygons/thika.txt
 dennis pritt => polygons/dennis_pritt.txt
 denis pritt => polygons/dennis_pritt.txt
 dennis prit => polygons/dennis_pritt.txt

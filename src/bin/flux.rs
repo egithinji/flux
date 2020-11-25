@@ -6,6 +6,8 @@ use flux::file_operations::save_location_description;
 use flux::file_operations::get_hashmap_of_locations;
 use flux::file_operations::write_unmatched_location;
 use flux::file_operations::write_feature_collection_to_file;
+use flux::file_operations::user_posted_today;
+use flux::file_operations::write_user_id;
 use flux::geojson::get_random_point_in_polygon;
 use flux::statistics::Statistics;
 use geo::Polygon;
@@ -78,6 +80,9 @@ async fn main() {
                 println!("-----------------------------------");
                 match process_tweet(tweet) {
                     Some(f) => {
+
+                       //store the user's id in the antispam file 
+                        write_user_id(&f.properties.user_id);
                         //add the feature to the both feature collections (for the month and for
                         //today)
                         fc.add_feature(f.clone());
@@ -106,11 +111,11 @@ fn process_tweet(tweet: egg_mode::tweet::Tweet) -> Option<Feature> {
     //First, strip the text of non-ascii characters.
     let text = pattern_matching::convert_to_ascii(&tweet.text);
     
-    //First of all, we're not interested in retweets
+    //We're not interested in retweets
     if pattern_matching::is_retweet(&text) {
         return None
     }
-   
+
     //Get a hashmap of location descriptions to polygons
     let locations = get_hashmap_of_locations();
 
@@ -142,6 +147,11 @@ fn process_tweet(tweet: egg_mode::tweet::Tweet) -> Option<Feature> {
                 None => {}
             }
 
+            //At this point, check if this user is a spammer. If so return none and don't proceed
+
+            if user_posted_today(uid) {
+                    return None
+            }
 
             //Then create a flux tweet with all this information
             let new_tweet = Tweet {

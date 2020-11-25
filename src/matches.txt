@@ -1515,3 +1515,28 @@ User Id: 448278024
 Posted on: 15:05pm on Tue Nov 24 2020
  Text: @KenyaPower_Care Power outage in Ruaka, Lane 26 for the past 1 hour
 ********************************
+Id: 356
+User Id: 1057236216268144640
+Posted on: 15:28pm on Wed Nov 25 2020
+ Text: This is KPLC for you. @KenyaPower_Care  at Machakos since yesterday https://t.co/IYWc6wIcFb
+********************************
+Id: 357
+User Id: 537689497
+Posted on: 15:44pm on Wed Nov 25 2020
+ Text: @KenyaPower_Care Hi. No power in Old Town, Mombasa. Opposite Mlango wa Papa mosque, Mombasa. Metre no. 37187440575. Phone in DM
+********************************
+Id: 358
+User Id: 1130917897637957634
+Posted on: 15:48pm on Wed Nov 25 2020
+ Text: @KenyaPower_Care 14107282577 SouthC area..NO POWER.  please restore please please
+********************************
+Id: 359
+User Id: 326099959
+Posted on: 15:49pm on Wed Nov 25 2020
+ Text: @KenyaPower_Care no power in Nairobi West near Nairobi West Hospital. Please look into it..
+********************************
+Id: 360
+User Id: 427445790
+Posted on: 15:51pm on Wed Nov 25 2020
+ Text: Kplc @KenyaPower_Care please send team to remove this pole, it will fall on your customers car. It has been there for long. 200meters from Thindigwa police post.
+********************************

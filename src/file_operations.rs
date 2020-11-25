@@ -202,3 +202,40 @@ pub fn write_unmatched_location(text: &str) {
 
 
 }
+
+pub fn write_user_id(uid: &u64) {
+//write the provided uid to the antispam.txt file
+    
+    let mut f = OpenOptions::new()
+        .append(true)
+        .open("antispam.txt")
+        .unwrap();
+
+    if let Err(e) = writeln!(f, "{}", uid.to_string()) {
+        eprintln!("Error writing uid to file: {}", e);
+    }
+
+}
+
+pub fn user_posted_today(uid: u64) -> bool {
+//If the user's id is in the antispam.txt file, return true
+
+// I'm using the read_liines method described here:
+    // https://doc.rust-lang.org/stable/rust-by-example/std_misc/file/read_lines.html
+    if let Ok(lines) = read_lines("antispam.txt") {
+        
+        for line in lines {
+
+            if let Ok(text) = line {
+                
+                if uid.to_string() == text {
+                    return true
+                }
+
+            }
+        }
+    }
+    false
+}
+
+

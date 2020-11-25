@@ -1,10 +1,10 @@
 {
-  "top_today": "Lower Kabete",
+  "top_today": "Nairobi West",
   "top_3_this_month": [
-    "Highrise",
-    "Wangige",
-    "Ruaka"
+    "Nairobi West",
+    "Machakos",
+    "Old Town"
   ],
-  "total_complaints_today": 3,
+  "total_complaints_today": 5,
   "total_complaints_this_month": 5
 }
