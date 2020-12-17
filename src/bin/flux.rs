@@ -143,6 +143,12 @@ fn process_tweet(tweet: egg_mode::tweet::Tweet) -> Option<Feature> {
             
                 Some(b) => {
                         uid = b.id;
+                        match b.location {
+                            Some(l) => {
+                                println!("******\nThe location of the tweeter is {:?}\n*****************",l);
+                            },
+                            None => {}
+                        }
                 },
                 None => {}
             }

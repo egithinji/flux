@@ -6,85 +6,3740 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          37.279748762386994,
-          -1.5147363340720963
+          36.66195620797545,
+          -1.2366715920786835
         ]
       },
       "properties": {
-        "text": "This is KPLC for you. @KenyaPower_Care  at Machakos since yesterday https://t.co/IYWc6wIcFb",
-        "posted_on": "15:28pm on Wed Nov 25 2020",
-        "area": "machakos",
-        "user_id": 1057236216268144640
+        "text": "@KenyaPower_Care No power in Kikuyu town and its environs  since 21.30 hours /27_11_2020 till now, 04.37 hours /28_11_2020. \n\nKindly do something about it please. \n\nThank you in advance",
+        "posted_on": "01:27am on Sat Nov 28 2020",
+        "area": "kikuyu",
+        "user_id": 636319456
       },
-      "id": 356
+      "id": 2916
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          39.678712593568356,
-          -4.061488727726683
+          36.66291415684411,
+          -1.240441542518918
         ]
       },
       "properties": {
-        "text": "@KenyaPower_Care Hi. No power in Old Town, Mombasa. Opposite Mlango wa Papa mosque, Mombasa. Metre no. 37187440575. Phone in DM",
-        "posted_on": "15:44pm on Wed Nov 25 2020",
-        "area": "old town",
-        "user_id": 537689497
+        "text": "@KenyaPower_Care  there is no power in Kikuyu kidfarmaco area. Kindly assist.",
+        "posted_on": "01:37am on Sat Nov 28 2020",
+        "area": "kikuyu",
+        "user_id": 4051824160
       },
-      "id": 357
+      "id": 2917
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          36.825716223828415,
-          -1.3287712569518408
+          36.927516591008654,
+          -1.165221935917332
         ]
       },
       "properties": {
-        "text": "@KenyaPower_Care 14107282577 SouthC area..NO POWER.  please restore please please",
-        "posted_on": "15:48pm on Wed Nov 25 2020",
-        "area": "south_c",
-        "user_id": 1130917897637957634
+        "text": "@KenyaPower_Care no power in membley area for hours near st lucia church. Mtr no 37196794400 Phone 0722859457",
+        "posted_on": "02:11am on Sat Nov 28 2020",
+        "area": "membley",
+        "user_id": 960570504464732160
       },
-      "id": 358
+      "id": 2918
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          36.82301255868232,
-          -1.3096313188910647
+          36.66271844508902,
+          -1.240673040841333
         ]
       },
       "properties": {
-        "text": "@KenyaPower_Care no power in Nairobi West near Nairobi West Hospital. Please look into it..",
-        "posted_on": "15:49pm on Wed Nov 25 2020",
+        "text": "@KenyaPower_Care Kikuyu town. No power.",
+        "posted_on": "02:15am on Sat Nov 28 2020",
+        "area": "kikuyu",
+        "user_id": 475580252
+      },
+      "id": 2919
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.71209779011384,
+          -1.3585157195479904
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @Nymoh__ No electricity in Karen Plains. Account no: 29616230",
+        "posted_on": "02:59am on Sat Nov 28 2020",
+        "area": "karen",
+        "user_id": 1111173676093882368
+      },
+      "id": 2920
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.88113607284884,
+          -1.321869050222376
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care rudisheni stima imara daima",
+        "posted_on": "03:07am on Sat Nov 28 2020",
+        "area": "imara daima",
+        "user_id": 2295701460
+      },
+      "id": 2921
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.679919639078534,
+          -1.3318718644487402
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care we have had no power in Karen Kwarara road since the early hours of the morning.",
+        "posted_on": "03:08am on Sat Nov 28 2020",
+        "area": "karen",
+        "user_id": 2264022578
+      },
+      "id": 2922
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.68219962379312,
+          -1.3339192523561625
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power in Karen Plains AC 22218923.",
+        "posted_on": "03:26am on Sat Nov 28 2020",
+        "area": "karen",
+        "user_id": 265499112
+      },
+      "id": 2923
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.819772189988626,
+          -1.1605241635262238
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care I don't know what's happening in kiambu town and it's surrounding villages nowadays we have been experiencing power blackouts every now and then as i write this there's no power since 1.30am",
+        "posted_on": "03:30am on Sat Nov 28 2020",
+        "area": "kiambu town",
+        "user_id": 3970852571
+      },
+      "id": 2924
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.65934278580637,
+          -1.2366415515992624
+        ]
+      },
+      "properties": {
+        "text": "Intermittent power for several days now at Shakiwa Gardens Kikuyu. AC No. 54601736363. Please assist ASAP @KenyaPower_Care",
+        "posted_on": "03:31am on Sat Nov 28 2020",
+        "area": "kikuyu",
+        "user_id": 1310897220120649730
+      },
+      "id": 2925
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.93501676611047,
+          -1.211064822942231
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Guys, stima huku Githurai iko down since Wednesday 4pm, kindly act on it. Kangema line, Githurai 45 #kenyapower, it keeps coming on and off",
+        "posted_on": "03:40am on Sat Nov 28 2020",
+        "area": "githurai 45",
+        "user_id": 2220983112
+      },
+      "id": 2926
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.70615608491273,
+          -1.2770040025609553
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care blackout in Uthiru 87 account number 37125034464. It's been a while since we last talked. Can I have my electricity back please?",
+        "posted_on": "03:52am on Sat Nov 28 2020",
+        "area": "uthiru",
+        "user_id": 590807812
+      },
+      "id": 2927
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.74462134352949,
+          -1.2604640823556386
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power in Loresho acc 232735. Started misbehaving last night then finally went off at about 2am. Kindly attend to this.",
+        "posted_on": "03:53am on Sat Nov 28 2020",
+        "area": "loresho",
+        "user_id": 18629481
+      },
+      "id": 2928
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.69076754037325,
+          -1.2478767391608214
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care No power in 87, Kinoo. Please resolve. A/c nos 37194995033.",
+        "posted_on": "03:57am on Sat Nov 28 2020",
+        "area": "kinoo",
+        "user_id": 988790316
+      },
+      "id": 2929
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.79919410973024,
+          -1.2206981755187645
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power in Makao Rosslyn, Ruaka ac. 14244188877. This transformer always has the same issue",
+        "posted_on": "03:59am on Sat Nov 28 2020",
+        "area": "rosslyn",
+        "user_id": 1706840940
+      },
+      "id": 2930
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.66373832434845,
+          -1.2507168174052004
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care the whole of Kikuyu town still doesn't have electricity from yesterday night. Are you aware? We hope you're working to resolve this issue",
+        "posted_on": "04:01am on Sat Nov 28 2020",
+        "area": "kikuyu",
+        "user_id": 947567800356401153
+      },
+      "id": 2931
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78881786583379,
+          -1.213044342031134
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care and again there is no power in Ruaka",
+        "posted_on": "04:02am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 348297651
+      },
+      "id": 2932
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.77352027924629,
+          -1.2046590951434113
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care I'd like to report a blackout at Joyland area in Ruaka. Meter number is 37196039525",
+        "posted_on": "04:06am on Sat Nov 28 2020",
+        "area": "joyland",
+        "user_id": 2870419647
+      },
+      "id": 2933
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.781614707461074,
+          -0.05208915304815619
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power as usual in Kisumu Mt.Sinai area around Obwolo mamboleo acct.45499456.pls help..call 0726002143 Tina",
+        "posted_on": "04:06am on Sat Nov 28 2020",
+        "area": "mamboleo",
+        "user_id": 749258881
+      },
+      "id": 2934
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.6637834326661,
+          -1.237446736098164
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care we've not had power in Kikuyu since last evening. What's happening? We're working from home we need power.",
+        "posted_on": "04:09am on Sat Nov 28 2020",
+        "area": "kikuyu",
+        "user_id": 295623109
+      },
+      "id": 2935
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.68954992403425,
+          -1.2461482101418484
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care REF NO. 6123092-\n\nWE HAVEN'T HAD LIGHTS AT KINOO-KANYARIRI NEAR KINOO PRIMARY FROM 11PM 27/11/2020.\n\nACCOUNT NO. 37168743229",
+        "posted_on": "04:12am on Sat Nov 28 2020",
+        "area": "kinoo",
+        "user_id": 1209403362040516608
+      },
+      "id": 2936
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.783750056177624,
+          -1.2078322575408793
+        ]
+      },
+      "properties": {
+        "text": "@slyrie @KenyaPower_Care Woi. Ruaka aki.",
+        "posted_on": "04:13am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 437457391
+      },
+      "id": 2937
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.68794310091069,
+          -1.2487686442938528
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Good morning, no power in kinoo near 87. It's inconveniencing alot.",
+        "posted_on": "04:16am on Sat Nov 28 2020",
+        "area": "kinoo",
+        "user_id": 908982966281539584
+      },
+      "id": 2938
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.797615712526635,
+          -1.2176647415412665
+        ]
+      },
+      "properties": {
+        "text": "Hi....Again this early morning aki there’s no power in Ruaka, Rosslyn Slaughter rd\nAccount number: 14282788604\n@KenyaPower_Care",
+        "posted_on": "04:19am on Sat Nov 28 2020",
+        "area": "rosslyn",
+        "user_id": 1255540241391386630
+      },
+      "id": 2939
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.843120208433376,
+          -1.3193017246588683
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Kind assist in sorting power outage every like five or ten minutes from yesterday. This seems to be on one phase.\nArea is south b (Meter number 01450516685)",
+        "posted_on": "04:22am on Sat Nov 28 2020",
+        "area": "south b",
+        "user_id": 947695202994704384
+      },
+      "id": 2940
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78558883277754,
+          -1.2118272218913468
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Is there a reason you pick on Ruaka every other time?  I don't think we've ever gone for three days without power outage. Also, Don't you think 7 is a little too early? What gives?",
+        "posted_on": "04:27am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 3059070262
+      },
+      "id": 2941
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78892107151066,
+          -1.2136573484337332
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care you guys are just too irritating.  Since Wednesday Ruaka has been experiencing power outages daily during the day. Calling your customer care who sounds so worked up,  they just say they've reported and can't do more. Its just so frustrating.",
+        "posted_on": "04:30am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 1091926585
+      },
+      "id": 2942
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.897331742215464,
+          -1.3226901598619825
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care there's power outage at pipeline Kenya builders area from yesterday 11pm.. account number is 37155384722 please do something about it. We've frequent outage here. Put a lasting solution",
+        "posted_on": "04:35am on Sat Nov 28 2020",
+        "area": "pipeline",
+        "user_id": 254900069
+      },
+      "id": 2943
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.89048238192646,
+          -1.31471730544252
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower have confirmed you don't have respect at all to your clients.Have been trying to call but you put me on hold simply you know the mess you has put into.Blackout everyday jus a particular in Pipeline around Muhindi Mwehusi supermarket Stage_Mpya.SHAME",
+        "posted_on": "04:36am on Sat Nov 28 2020",
+        "area": "stage mpya",
+        "user_id": 1135604117450215425
+      },
+      "id": 2944
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.72069234781131,
+          -1.267409313294555
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Uthiru 87",
+        "posted_on": "04:36am on Sat Nov 28 2020",
+        "area": "uthiru",
+        "user_id": 146411355
+      },
+      "id": 2945
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.66681308629583,
+          -1.234502173300765
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care No power in Kikuyu town. What is happening?",
+        "posted_on": "04:41am on Sat Nov 28 2020",
+        "area": "kikuyu",
+        "user_id": 1147911476
+      },
+      "id": 2946
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.66544644422817,
+          -1.2421898429557232
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power in Kidfarmaco, Kikuyu since last night. What could be the issue? A/c 10415941",
+        "posted_on": "04:41am on Sat Nov 28 2020",
+        "area": "kikuyu",
+        "user_id": 77944617
+      },
+      "id": 2947
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.787562369488946,
+          -1.2036501842192782
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower it's tooooo early for power issues..at Ruaka 😩😩☺️ yaani a whole week",
+        "posted_on": "04:48am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 178058539
+      },
+      "id": 2948
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.79043026715142,
+          -1.2116558464677964
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @mchelsinki Rosslyn Slaughter road",
+        "posted_on": "04:49am on Sat Nov 28 2020",
+        "area": "rosslyn",
+        "user_id": 1089222087938621440
+      },
+      "id": 2949
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78678718076816,
+          -1.2083080629158975
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower Dear Monopoly, seems we have another fault in the area that has just caused another power outage at 6:50am 🙆🏾‍♀️. 3rd outage this week. Any chance of a more permanent fix...maybe 🤷🏽‍♀️? Yes? No? Acc 33986472. Ruaka.",
+        "posted_on": "04:51am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 62697774
+      },
+      "id": 2950
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.790300452329646,
+          -1.2138564686165494
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @Amacheez Ruaka",
+        "posted_on": "04:51am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 490701338
+      },
+      "id": 2951
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.81865893089123,
+          -1.1591947403947451
+        ]
+      },
+      "properties": {
+        "text": "@uwanja @KenyaPower_Care You're definitely not in Kiambu town.",
+        "posted_on": "04:55am on Sat Nov 28 2020",
+        "area": "kiambu town",
+        "user_id": 334037550
+      },
+      "id": 2952
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.77297229003256,
+          -1.20426627627568
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care blackout in ruaka joyland. Please address",
+        "posted_on": "04:59am on Sat Nov 28 2020",
+        "area": "joyland",
+        "user_id": 1132969773057355776
+      },
+      "id": 2953
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.93777082626847,
+          -1.2185970609172914
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care I woke up to find that a fire had been slowly forming on our fence due to a main electricity wire snapping and falling on our fence. The area is in Githurai 45, near the MCA's office KIUU ward.. Please look into this ASAP.",
+        "posted_on": "05:00am on Sat Nov 28 2020",
+        "area": "githurai 45",
+        "user_id": 1023133789
+      },
+      "id": 2954
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.710120255584336,
+          -1.27732542450183
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @WangetheP We do not have power near uthiru girls high school please look into that",
+        "posted_on": "05:03am on Sat Nov 28 2020",
+        "area": "uthiru",
+        "user_id": 2358878457
+      },
+      "id": 2955
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78892966204839,
+          -1.211513990581285
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power in ruaka",
+        "posted_on": "05:03am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 424106702
+      },
+      "id": 2956
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.75206979956555,
+          -1.2567150083270189
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @Kalasinga_ Is it also affecting Loresho?",
+        "posted_on": "05:06am on Sat Nov 28 2020",
+        "area": "loresho",
+        "user_id": 250532368
+      },
+      "id": 2957
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78337495729255,
+          -1.2031922163062243
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care what's the excuse today for no power in ruaka area.? You have 1 job... 1 job! so fucking incompetent",
+        "posted_on": "05:06am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 342562847
+      },
+      "id": 2958
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.030049665688,
+          -1.0878647992375914
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power since jana jioni hapa Juja Highpoint.   a/c 54603428951. Please look into this",
+        "posted_on": "05:08am on Sat Nov 28 2020",
+        "area": "juja",
+        "user_id": 1248367920725528576
+      },
+      "id": 2959
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.7844381641591,
+          -1.20493485333804
+        ]
+      },
+      "properties": {
+        "text": "@muthonitweets @KenyaPower_Care You know! Ruaka has had like four days if blackouts thus week alone!",
+        "posted_on": "05:08am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 706578786
+      },
+      "id": 2960
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.731422705818915,
+          -1.3676200083444736
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power in Karen, Kwarara Road area since yesterday shortly before 10p.m",
+        "posted_on": "05:11am on Sat Nov 28 2020",
+        "area": "karen",
+        "user_id": 1214529149999755264
+      },
+      "id": 2961
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.79163717741989,
+          -1.2108861590376798
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care No Ruaka but lights are off",
+        "posted_on": "05:12am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 1064109723857969152
+      },
+      "id": 2962
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.021958275586435,
+          -1.0901579078119137
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower @KenyaPower_Care no lights since yesterday in juja Imani house near juja modern hospital ,account 37193074780.",
+        "posted_on": "05:12am on Sat Nov 28 2020",
+        "area": "juja",
+        "user_id": 1372279632
+      },
+      "id": 2963
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78730925537472,
+          -1.204558218470281
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care No Power in Ruaka AC 37187006566",
+        "posted_on": "05:15am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 786188939128283136
+      },
+      "id": 2964
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.94934129056587,
+          -1.398437705657294
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care a whole week..no power from Sunday at Mlolongo near police post..a whole week!!",
+        "posted_on": "05:18am on Sat Nov 28 2020",
+        "area": "mlolongo",
+        "user_id": 2196118003
+      },
+      "id": 2965
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.69016923036459,
+          -1.2461255605706176
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @kot The complaint with referrence 6120126 is in the status: Pending\nThis is so inconveniencing from yesterday 6am till now having no lights at Kinoo. No communication from you makes this service questionable...",
+        "posted_on": "05:21am on Sat Nov 28 2020",
+        "area": "kinoo",
+        "user_id": 466310612
+      },
+      "id": 2966
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.02373943908067,
+          -1.0863779107114688
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Good morning. No power at Acc: 12076758. Juja Highpoint. And the neighborhood.",
+        "posted_on": "05:29am on Sat Nov 28 2020",
+        "area": "juja",
+        "user_id": 568863225
+      },
+      "id": 2967
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78959620176199,
+          -1.2041607765644735
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Lights out in Ruaka, Getrudes again, whats not happening?Acc: 37164009054",
+        "posted_on": "05:30am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 323746736
+      },
+      "id": 2968
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.81808497626196,
+          -1.1624288071555948
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care We are offgrid in Kiambu town and its environs ? Whats up ? Ama noogle 🙉 zimefanya dhambi tena kwa waya ?",
+        "posted_on": "05:32am on Sat Nov 28 2020",
+        "area": "kiambu town",
+        "user_id": 505962032
+      },
+      "id": 2969
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.7910090669876,
+          -1.2054204036333416
+        ]
+      },
+      "properties": {
+        "text": "Was Ruaka included here today.?",
+        "posted_on": "05:34am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 706071950
+      },
+      "id": 2970
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.10241194222306,
+          0.4558766747407216
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care please sort us out of this blackout since yesterday night after the heavy rains in Busia County, Nambale subcounty, Ebenezer area near St Mary's primary school - Nambale just before Nambale Centre.",
+        "posted_on": "05:35am on Sat Nov 28 2020",
+        "area": "busia",
+        "user_id": 299363785
+      },
+      "id": 2971
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78471341385169,
+          -1.2073059435513809
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Another day with no electricity in ruaka. Are you people even serious? 2 days in a row and third time this week? What's your excuse this time?",
+        "posted_on": "05:36am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 373235162
+      },
+      "id": 2972
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.79181988667965,
+          -1.2106414344910237
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower_Care Ruaka isn't in your list. There has been a power outage since 7:00 am. What is wrong?",
+        "posted_on": "05:40am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 761474889140371456
+      },
+      "id": 2973
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.77408870490952,
+          -1.2064292048891003
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower_Care  no power at Mareika drive,Ruaka Joyland KPLC Token \nMtrNo: 14107389083 🤷",
+        "posted_on": "05:42am on Sat Nov 28 2020",
+        "area": "joyland",
+        "user_id": 877989307230945281
+      },
+      "id": 2974
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.7899327581562,
+          -1.2115943802168254
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care we have no power again in ruaka. This is becoming a daily occurrence even when not scheduled for maintenance. Kindly do something about it. Thanks",
+        "posted_on": "05:46am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 291315088
+      },
+      "id": 2975
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.6603562246348,
+          -1.2372398855298217
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower this week alone, we in parts of kikuyu town have had more than 5 blackouts, including last night untill now. Please help, otherwise you putting our lives at risk.",
+        "posted_on": "05:48am on Sat Nov 28 2020",
+        "area": "kikuyu",
+        "user_id": 915826839507161088
+      },
+      "id": 2976
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.787152647085854,
+          -1.2131226330969689
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care We have been having prolonged power inconsistencies in Ruaka since Wednesday. What is happening?",
+        "posted_on": "05:48am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 327318828
+      },
+      "id": 2977
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.82931102362296,
+          -1.1727250802174796
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power in kiambu town...zilipotea usiku",
+        "posted_on": "05:50am on Sat Nov 28 2020",
+        "area": "kiambu town",
+        "user_id": 1254335405824118784
+      },
+      "id": 2978
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.03591877343987,
+          -1.09638458937989
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care No lights in Juja,Gashororo near gashororo hospital. \nMeter:37195288982\nRestore power please",
+        "posted_on": "05:51am on Sat Nov 28 2020",
+        "area": "juja",
+        "user_id": 1193817403572080640
+      },
+      "id": 2979
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.88729306160136,
+          -1.3084540917241951
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power in transamia...next to kenya builders and pipeline area",
+        "posted_on": "05:54am on Sat Nov 28 2020",
+        "area": "pipeline",
+        "user_id": 2434717113
+      },
+      "id": 2980
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.68692048565174,
+          -1.2502335156170583
+        ]
+      },
+      "properties": {
+        "text": "We have no lights for the past 3 days. Meter no 04219929785. Nearest landmark Jacmil Supermarket Kinoo.\nWill you bother  @KenyaPower_Care fixing this?",
+        "posted_on": "05:55am on Sat Nov 28 2020",
+        "area": "kinoo",
+        "user_id": 257565753
+      },
+      "id": 2981
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.665088953308405,
+          -1.245607098705756
+        ]
+      },
+      "properties": {
+        "text": "Hakuna stima Huku kikuyu @KenyaPower_Care",
+        "posted_on": "05:59am on Sat Nov 28 2020",
+        "area": "kikuyu",
+        "user_id": 428006340
+      },
+      "id": 2982
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.71833979248694,
+          -1.217943539675749
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower  08:59hrs wangige Kikuyu lower kabete and environs no power ,what could be the issue ?",
+        "posted_on": "06:00am on Sat Nov 28 2020",
+        "area": "wangige",
+        "user_id": 1943839086
+      },
+      "id": 2983
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.876174794421,
+          -1.3219302128422603
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care It's crazy how Imara daima and it's environs don't have power for two days and nothing has been addressed. Kindly fix this it's becoming too much",
+        "posted_on": "06:00am on Sat Nov 28 2020",
+        "area": "imara daima",
+        "user_id": 3022760397
+      },
+      "id": 2984
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.788506212582675,
+          -1.204950888057212
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Again week electricity 😭what’s not happening to ruaka every day we must have issues and no one Is addressing them my meter no 54601221036",
+        "posted_on": "06:01am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 2511951430
+      },
+      "id": 2985
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.65977213631281,
+          -1.2420495905332538
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care had no power since yesternight. Kikuyu Town. The whole town!! 12 incredible hours!!",
+        "posted_on": "06:03am on Sat Nov 28 2020",
+        "area": "kikuyu",
+        "user_id": 872276839
+      },
+      "id": 2986
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.902674314776206,
+          -1.2917986549853706
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care I'm still waiting.....follow up was to be done yesterday nearest substation is here in donholm a 30 min drive if their is traffic if there is no traffic guys should be on site in 3 minutes with the new transformer.",
+        "posted_on": "06:03am on Sat Nov 28 2020",
+        "area": "donholm",
+        "user_id": 214126260
+      },
+      "id": 2987
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.09838240233395,
+          0.45741667202038705
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Hi, no power in Busia (Ochude) since around 3am last night. Help. Account No..37170354429",
+        "posted_on": "06:05am on Sat Nov 28 2020",
+        "area": "busia",
+        "user_id": 81191927
+      },
+      "id": 2988
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78421369348631,
+          -1.2082822062423626
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower Blackout in Ruaka Bypass. Mvua ime enda na stima #GizaMtaani @CofekRebranded",
+        "posted_on": "06:05am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 79135651
+      },
+      "id": 2989
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78834112844075,
+          -1.2129276778517837
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Hi we still don't have lights in Ruaka",
+        "posted_on": "06:06am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 356591326
+      },
+      "id": 2990
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.46767723960286,
+          -0.5332748540815095
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care power outage in iveche embu since last night. 23569504",
+        "posted_on": "06:10am on Sat Nov 28 2020",
+        "area": "embu",
+        "user_id": 163550980
+      },
+      "id": 2991
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78716387641199,
+          -1.2123733769296603
+        ]
+      },
+      "properties": {
+        "text": "@slyrie @KenyaPower_Care Lmfao Ruaka lazima tuhame sasaa",
+        "posted_on": "06:10am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 2437126286
+      },
+      "id": 2992
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78697000111936,
+          -1.2069848330685466
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care for the 100th time , we are experiencing power outage in Ruaka area near Gertrudes, we want to understand why you cannot get a permanent solution for us, we are tired of complaining!!! Do something and we are tired of you telling us you are addressing the issue!",
+        "posted_on": "06:14am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 700768309
+      },
+      "id": 2993
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.946147034492256,
+          -1.1445568366219003
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care  low voltage 14286495776 ruiru toll tabby kindergarten",
+        "posted_on": "06:16am on Sat Nov 28 2020",
+        "area": "ruiru",
+        "user_id": 364770654
+      },
+      "id": 2994
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.792287834988315,
+          -1.2076968183072188
+        ]
+      },
+      "properties": {
+        "text": "I read an article that @KenGenKenya may start selling power directly to consumers...well you can start with Ruaka as your 'POC' as @KenyaPower_Care is failing us miserably!",
+        "posted_on": "06:27am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 235161688
+      },
+      "id": 2995
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.69011328297286,
+          -1.2457223183550117
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care kindly confirm if their is a major issue in Kinoo 87, been without power since 5 am",
+        "posted_on": "06:30am on Sat Nov 28 2020",
+        "area": "kinoo",
+        "user_id": 358160319
+      },
+      "id": 2996
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.68803046210013,
+          -1.2479038390578756
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care kindly fix this issue in kinoo.. No lights at all..",
+        "posted_on": "06:31am on Sat Nov 28 2020",
+        "area": "kinoo",
+        "user_id": 159954874
+      },
+      "id": 2997
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78503098481393,
+          -1.210579132135982
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care sasa alafu? Tukae bila stima leo pia ama? This is in Ruaka.",
+        "posted_on": "06:41am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 1031247469638832128
+      },
+      "id": 2998
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.660213723939265,
+          -1.2382984198319624
+        ]
+      },
+      "properties": {
+        "text": "@bonifacemwangi @KenyaPower_Care @JerotichSeii I don't see any problem with this, they must regulate to ensure customers get quality products otherwise Kikuyu traders are going to infiltrate the market with cheap substandard goods.",
+        "posted_on": "06:51am on Sat Nov 28 2020",
+        "area": "kikuyu",
+        "user_id": 1446724280
+      },
+      "id": 2999
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.75219631235724,
+          -1.2537993287005191
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care We have no power in loresho what’s going on ?",
+        "posted_on": "06:53am on Sat Nov 28 2020",
+        "area": "loresho",
+        "user_id": 28551858
+      },
+      "id": 3000
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.79024548323079,
+          -1.2125283972403604
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care there is power outage in Ruaka. What is actually going on??? Kindly restore. \nLandmark: Quickmart",
+        "posted_on": "06:54am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 372698441
+      },
+      "id": 3001
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.697186166148185,
+          -1.2832293331132651
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care we have no power in Uthiru 87 AC:14243284586  since last night. Please expedite",
+        "posted_on": "06:56am on Sat Nov 28 2020",
+        "area": "uthiru",
+        "user_id": 196719302
+      },
+      "id": 3002
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.79027041238699,
+          -1.213078093865899
+        ]
+      },
+      "properties": {
+        "text": "Lakini @KenyaPower_Care si mumeharibia ruaka jina aki. Hadi on a cold Saturday like this?!!! \nShida inakuanga wapi?",
+        "posted_on": "06:56am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 478745994
+      },
+      "id": 3003
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.65012329589864,
+          0.08312218905028043
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care We have been in darkness for 3 days here in Timau ward ,meru county.",
+        "posted_on": "06:59am on Sat Nov 28 2020",
+        "area": "meru",
+        "user_id": 1247614209325744130
+      },
+      "id": 3004
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.783393742340245,
+          -1.2057277027785334
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Hi...Ruaka in darkness again .. California Road to be specific",
+        "posted_on": "06:59am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 2963844556
+      },
+      "id": 3005
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.74959336899178,
+          -1.2629087198428703
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power on Loresho Ridge Road. Kindly advise",
+        "posted_on": "07:03am on Sat Nov 28 2020",
+        "area": "loresho",
+        "user_id": 117981909
+      },
+      "id": 3006
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.689717893328194,
+          -1.2461421673324264
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Kinoo in the dark againnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnmnnnnnn since yesterday evening some area same situation againnnnnnnnnnnnnnnnnnnnmmmmnnnnnnnnnnnn ac no 37168654365",
+        "posted_on": "07:04am on Sat Nov 28 2020",
+        "area": "kinoo",
+        "user_id": 1146306007376760832
+      },
+      "id": 3007
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.704403627475536,
+          -1.257384936925035
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Restore power...damacrest 87 kinoo",
+        "posted_on": "07:05am on Sat Nov 28 2020",
+        "area": "87 kinoo",
+        "user_id": 700966547574153216
+      },
+      "id": 3008
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78724252633908,
+          -1.2125986897448602
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power at ruaka 37169830629. Whats the issue? Yesterday the same.",
+        "posted_on": "07:05am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 458190092
+      },
+      "id": 3009
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.94441574857224,
+          -1.3987940415022302
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower @KenyaPower_Care \nA week a go a kplc transformer broke down in mlolongo,there has been adverse effects of this breakdown to the populace ,populace unable to access water for general hygiene ,Travelling long distances  including hiked water prices.Our hygiene at stake.",
+        "posted_on": "07:08am on Sat Nov 28 2020",
+        "area": "mlolongo",
+        "user_id": 1146053320919769088
+      },
+      "id": 3010
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.75165463686388,
+          -1.255619132695856
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care No power from Hinga Road, Kibagare loresho and kyuna please act. Mitre 37166927907",
+        "posted_on": "07:08am on Sat Nov 28 2020",
+        "area": "loresho",
+        "user_id": 927503309862293504
+      },
+      "id": 3011
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78566827630737,
+          -1.2087627048452378
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care is it that you have started power rationing in ruaka ????\nThe whole week there has been no power during the day!",
+        "posted_on": "07:14am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 543642397
+      },
+      "id": 3012
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.952707658899115,
+          -1.353411636260709
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care ni kama mumeanua Stima huku syokimau isinyeshewe ama?",
+        "posted_on": "07:15am on Sat Nov 28 2020",
+        "area": "syokimau",
+        "user_id": 2386003449
+      },
+      "id": 3013
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.69419525833374,
+          -1.254954172339959
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Hakuna stima 87 &amp; Kinoo area. Do something about it.",
+        "posted_on": "07:21am on Sat Nov 28 2020",
+        "area": "kinoo",
+        "user_id": 860399223480750081
+      },
+      "id": 3014
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.77715724692455,
+          -1.2066285881588503
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care  power outage since 6:30am around Ruaka Joyland area ref # 6124020",
+        "posted_on": "07:24am on Sat Nov 28 2020",
+        "area": "joyland",
+        "user_id": 4479263303
+      },
+      "id": 3015
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.696185647169976,
+          -1.282926951140235
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Hello stima hapa uthiru gichagi hatuna",
+        "posted_on": "07:26am on Sat Nov 28 2020",
+        "area": "uthiru",
+        "user_id": 1329754990039232512
+      },
+      "id": 3016
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.87672172568399,
+          -1.3224016762639
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Kenya Power 14141024811 seriously how do you want us to do business if power will b going off daily is it that we r not paying or what is happening or the company is going down, coz i don't c how can power go off from imara daima all the way to quarry and you are not bothering.",
+        "posted_on": "07:26am on Sat Nov 28 2020",
+        "area": "imara daima",
+        "user_id": 919635785032306688
+      },
+      "id": 3017
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.711012119632784,
+          -1.2838405993175066
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care please we dont have power since 7am. Waithaka near DO's office",
+        "posted_on": "07:27am on Sat Nov 28 2020",
+        "area": "waithaka",
+        "user_id": 211808404
+      },
+      "id": 3018
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.789736903340255,
+          -1.2117219564053865
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower_Care  why is Ruaka disconnected yet there is no maintenance going on?",
+        "posted_on": "07:28am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 2193894600
+      },
+      "id": 3019
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.70081182872091,
+          -1.282688892317759
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care No power in uthiru cooperation...what's happening  frm 6am...37172297444",
+        "posted_on": "07:30am on Sat Nov 28 2020",
+        "area": "uthiru",
+        "user_id": 1207810710824259589
+      },
+      "id": 3020
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.791813319114006,
+          -1.2074794536085312
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care but what is your plan with ruaka?",
+        "posted_on": "07:30am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 26992698
+      },
+      "id": 3021
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.77624001626461,
+          -0.06962183473967971
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Restore power in mamboleo kisumu\nRestore power in mamboleo kisumu\nRestore power in mamboleo kisumu\nRestore power in mamboleo kisumu",
+        "posted_on": "07:33am on Sat Nov 28 2020",
+        "area": "mamboleo",
+        "user_id": 159782829
+      },
+      "id": 3022
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.6907049077132,
+          -1.2460808138978436
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care  snapped cables at kinoo opposite mama ngina...its wet and this is a real hazard...please address the issue https://t.co/dwknJDzD3V",
+        "posted_on": "07:36am on Sat Nov 28 2020",
+        "area": "kinoo",
+        "user_id": 229007021
+      },
+      "id": 3023
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.80391640278704,
+          -1.3182965098687025
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power in langata. AC no. 14140784928. Seems y’all want us to move to solar",
+        "posted_on": "07:37am on Sat Nov 28 2020",
+        "area": "langata",
+        "user_id": 423591680
+      },
+      "id": 3024
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78290441782637,
+          -1.2066181067752602
+        ]
+      },
+      "properties": {
+        "text": "Goodmorning @KenyaPower_Care how long will this 'Fault' take to sort? On this Ruaka main line?",
+        "posted_on": "07:38am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 289786017
+      },
+      "id": 3025
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.554179839574864,
+          0.560985103719222
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @muhatiaa Hakuna stima parts of bungoma county,that's kimilili and kamukuywa for a day now,wassup with you guys,we need power.",
+        "posted_on": "07:39am on Sat Nov 28 2020",
+        "area": "bungoma",
+        "user_id": 1157645378495426561
+      },
+      "id": 3026
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.66614512293019,
+          -1.3557067747585922
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care a/c no. 14106827539, Daniel Comboni Road off Ngong Road, no electricity since yesterday evening. Whats going on?",
+        "posted_on": "07:39am on Sat Nov 28 2020",
+        "area": "ngong",
+        "user_id": 464701594
+      },
+      "id": 3027
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.27509755946173,
+          0.052786504740191406
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care we are sick and tired of these fakeTRANSFORMERS that gets faulty every year in GOT OSIMBO VILLAGE, SIGOMERE WARD, UGUNJA SUB-COUNTY, SIAYA COUNTY. We are now 4 weeks here without power, hii monopoly imewashinda useless kabisaa",
+        "posted_on": "07:49am on Sat Nov 28 2020",
+        "area": "siaya",
+        "user_id": 2187092253
+      },
+      "id": 3028
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.66478690677276,
+          -1.1278165758685326
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care what’s with the frequent power outages in Kabuku Tigoni area for the last 48hrs,any end in sight?",
+        "posted_on": "07:53am on Sat Nov 28 2020",
+        "area": "tigoni",
+        "user_id": 417757524
+      },
+      "id": 3029
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.7933617410098,
+          -1.2071455082516689
+        ]
+      },
+      "properties": {
+        "text": "Dear @KenyaPower_Care kindly let us know if the Residence of Ruaka are serving a lesser god. We can’t be have blackouts everyday as if Ruaka is not in Kenya. Unacceptable!",
+        "posted_on": "07:53am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 47594153
+      },
+      "id": 3030
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78545452120311,
+          -1.2045768461866049
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower @KenyaPower_Care Its been a week Ruaka yote bila stima. Si you guys just get serious for a minute. @PDUDelivery",
+        "posted_on": "07:57am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 485975188
+      },
+      "id": 3031
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.72717074398022,
+          -1.2828491562991349
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care\nWe are experiencing power outage around Waithaka Crescent Road and its environs. Meter No. 14282744037.",
+        "posted_on": "07:57am on Sat Nov 28 2020",
+        "area": "waithaka",
+        "user_id": 2565729114
+      },
+      "id": 3032
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.80249105542047,
+          -1.31537588366815
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Wires from the transformer which serves our estate have exploded several times cause of wind. We have no power now. Canaan Estate Ongata Rongai.",
+        "posted_on": "07:59am on Sat Nov 28 2020",
+        "area": "canaan estate",
+        "user_id": 431889663
+      },
+      "id": 3033
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.823254264495155,
+          -1.3090341995729142
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care we've not had electricity for two days now... I called yesterday and I was informed it had been reported... Todate still no power yet our neighbors including Nairobi West Hospital which is an adjacent building has power. My metre no. 14228811213",
+        "posted_on": "08:00am on Sat Nov 28 2020",
         "area": "nairobi west",
-        "user_id": 326099959
+        "user_id": 361121416
       },
-      "id": 359
+      "id": 3034
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          36.83671671704062,
-          -1.2080823366583986
+          35.29348245747694,
+          -0.3791080970168608
         ]
       },
       "properties": {
-        "text": "Kplc @KenyaPower_Care please send team to remove this pole, it will fall on your customers car. It has been there for long. 200meters from Thindigwa police post.",
-        "posted_on": "15:51pm on Wed Nov 25 2020",
-        "area": "thindigwa",
-        "user_id": 427445790
+        "text": "@KenyaPower_Care Hello no power from yesterday, Kericho County, Litein, Rungut",
+        "posted_on": "08:04am on Sat Nov 28 2020",
+        "area": "kericho",
+        "user_id": 1332594959199989761
       },
-      "id": 360
+      "id": 3035
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.78764161084078,
+          -0.07050007846218817
+        ]
+      },
+      "properties": {
+        "text": "I am sorry to report to you that @KenyaPower_Care  might ignore this just like they ignore my complain about Kondele Kisumu but don't give up searching for what is right. It's just so bad that someone is failing to do the job. One day we will see the light",
+        "posted_on": "08:04am on Sat Nov 28 2020",
+        "area": "kondele",
+        "user_id": 2739315070
+      },
+      "id": 3036
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.939389374596544,
+          -1.1935046123455573
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care power outage in kahawa sukari and there was no alert or mention of maintenance?",
+        "posted_on": "08:04am on Sat Nov 28 2020",
+        "area": "kahawa sukari",
+        "user_id": 588795249
+      },
+      "id": 3037
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78638535539464,
+          -1.205789860616894
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no lights in Ruaka again! Why don't you guys at least issue communication to your clients? #kplcscam",
+        "posted_on": "08:05am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 606450576
+      },
+      "id": 3038
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.93423250678025,
+          -1.1980120043189513
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Kindly send your technicians to Kahawa Wendani Kwa Mung'ara...a transformer just exploded!",
+        "posted_on": "08:05am on Sat Nov 28 2020",
+        "area": "kahawa wendani",
+        "user_id": 714904499
+      },
+      "id": 3039
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.93404933961429,
+          -1.189040012438025
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Do something about Kahawa sukari. Businesses are being affected",
+        "posted_on": "08:06am on Sat Nov 28 2020",
+        "area": "kahawa sukari",
+        "user_id": 2846770113
+      },
+      "id": 3040
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.934408475059755,
+          -1.1871171217827603
+        ]
+      },
+      "properties": {
+        "text": "Hi @KenyaPower_Care we have no power in Kahawa Sukari and we have to work. Do something!",
+        "posted_on": "08:08am on Sat Nov 28 2020",
+        "area": "kahawa sukari",
+        "user_id": 310782646
+      },
+      "id": 3041
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.93558701077085,
+          -1.1994229363879962
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care \nHi Team,\nNo Power in Kahawa Downs Estate in Kahawa Wendani Area off Baringo road!\nPlease assist.",
+        "posted_on": "08:10am on Sat Nov 28 2020",
+        "area": "kahawa wendani",
+        "user_id": 229033639
+      },
+      "id": 3042
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.93858875562299,
+          -1.2012083243538283
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Hello, we have a blackout at Kahawa Wendani acc. 01450299639. Kindly sort us out",
+        "posted_on": "08:11am on Sat Nov 28 2020",
+        "area": "kahawa wendani",
+        "user_id": 409162117
+      },
+      "id": 3043
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.69209722640144,
+          -1.2538346758525654
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care we have not had power for 2 days now in Kinoo. Please do something.",
+        "posted_on": "08:14am on Sat Nov 28 2020",
+        "area": "kinoo",
+        "user_id": 834691763893915649
+      },
+      "id": 3044
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.83767722206119,
+          -1.1761256069578383
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care No power in Kirigiti since 3am, near GMC Church. Kindly assist. Meter No. 37187547023",
+        "posted_on": "08:14am on Sat Nov 28 2020",
+        "area": "kirigiti",
+        "user_id": 90843782
+      },
+      "id": 3045
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.93571838975344,
+          -1.2004930131357046
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Hey no lights in kahawa wendani and it was not scheduled",
+        "posted_on": "08:14am on Sat Nov 28 2020",
+        "area": "kahawa wendani",
+        "user_id": 1226728523550928896
+      },
+      "id": 3046
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.019873200901685,
+          -1.3721454097809018
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care There seems to be a fault on my connection. Meter number 37194628675 in Kitui",
+        "posted_on": "08:15am on Sat Nov 28 2020",
+        "area": "kitui",
+        "user_id": 68425124
+      },
+      "id": 3047
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78347143011545,
+          -1.2088240401729549
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Get serious Kenya Power. Ruaka has been bedeviled with no power for the 3rd day this week. How are we suppose to work with rolling blackouts?",
+        "posted_on": "08:18am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 1077134683262062592
+      },
+      "id": 3048
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.93129459109739,
+          -1.1963892330217032
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care kindly restore power in Kahawa Wendani.",
+        "posted_on": "08:21am on Sat Nov 28 2020",
+        "area": "kahawa wendani",
+        "user_id": 122681791
+      },
+      "id": 3049
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.79461215246974,
+          -1.2948346567640625
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Hello @KenyaPower_Care Blackout in Kilimani , Ndemi road",
+        "posted_on": "08:21am on Sat Nov 28 2020",
+        "area": "kilimani",
+        "user_id": 1745489724
+      },
+      "id": 3050
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.7881426007778,
+          -1.2135111190793535
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Yaani Ruaka the entire week electricity has been problematic without prior communication whatsoever...why?",
+        "posted_on": "08:22am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 264826382
+      },
+      "id": 3051
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.94060661418834,
+          -1.188051979577046
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care kahawa sukari we have lost power. Account 37207773963. Kindly assist",
+        "posted_on": "08:24am on Sat Nov 28 2020",
+        "area": "kahawa sukari",
+        "user_id": 537148466
+      },
+      "id": 3052
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.665753700414946,
+          -1.2410272663175628
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower A transfomer blew up in kikuyu yesterday send the necessary help to solve this issue once and for all. I pay my bills on time and i am tired of complaining. Do your job pls.",
+        "posted_on": "08:25am on Sat Nov 28 2020",
+        "area": "kikuyu",
+        "user_id": 1332400282555338752
+      },
+      "id": 3053
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.71090799505012,
+          -1.2809948876072452
+        ]
+      },
+      "properties": {
+        "text": "Hi we are not in the list but we don't have power in waithaka what is your plan",
+        "posted_on": "08:25am on Sat Nov 28 2020",
+        "area": "waithaka",
+        "user_id": 808211913528188928
+      },
+      "id": 3054
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.793302764641346,
+          -1.2063548524089174
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Hatuna stima ruaka shida iko wapi",
+        "posted_on": "08:26am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 1374133374
+      },
+      "id": 3055
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.90144894237457,
+          -1.3055190652839688
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Hi, parts of Tassia have been without power for two days now, close to standard drive. Some people have power while others don't!!",
+        "posted_on": "08:28am on Sat Nov 28 2020",
+        "area": "tassia",
+        "user_id": 742247918552424449
+      },
+      "id": 3056
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.1662815584833,
+          -0.7176715579500887
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Mliamua muranga muanue stima isinyeshewe",
+        "posted_on": "08:29am on Sat Nov 28 2020",
+        "area": "muranga",
+        "user_id": 703037016863277056
+      },
+      "id": 3057
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.936831717537295,
+          -1.1998215561778969
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Kahawa Wendani, Playway education centre area has a power blackout. Your assistance is required.",
+        "posted_on": "08:29am on Sat Nov 28 2020",
+        "area": "kahawa wendani",
+        "user_id": 434819378
+      },
+      "id": 3058
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.886453674194904,
+          -1.2787976213244645
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Hatuna stima in parts of umoja 1 meter no 14140550659",
+        "posted_on": "08:29am on Sat Nov 28 2020",
+        "area": "umoja 1",
+        "user_id": 2297450152
+      },
+      "id": 3059
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.93292625071839,
+          -1.1995504085381776
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care power outage at Kahawa Wendani due to a fallen transformer!!!",
+        "posted_on": "08:30am on Sat Nov 28 2020",
+        "area": "kahawa wendani",
+        "user_id": 35697584
+      },
+      "id": 3060
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.69415687331894,
+          -1.2475985182705245
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care What's wrong with the lights out at kinoo for two days surely\nKindly check MTR no37187199684",
+        "posted_on": "08:30am on Sat Nov 28 2020",
+        "area": "kinoo",
+        "user_id": 1312315234904928257
+      },
+      "id": 3061
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.93780010863155,
+          -1.2012764439759394
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Kindly do something. Your transformer just fell down at Kahawa Wendani. https://t.co/fXaCJIrbx2",
+        "posted_on": "08:32am on Sat Nov 28 2020",
+        "area": "kahawa wendani",
+        "user_id": 321966882
+      },
+      "id": 3062
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.774150358420165,
+          -1.2034019026859155
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Greetings. No lights in Ruaka area near Joyland since morning. Tumekosea wapi?",
+        "posted_on": "08:33am on Sat Nov 28 2020",
+        "area": "joyland",
+        "user_id": 434993155
+      },
+      "id": 3063
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.96598134336831,
+          -1.3579715764273357
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care What is the update on the outage in Katani Ref: 6123998. A little morning rain and we have no power hence compromising all our work scheduled for today",
+        "posted_on": "08:33am on Sat Nov 28 2020",
+        "area": "katani",
+        "user_id": 35194312
+      },
+      "id": 3064
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.93691632936208,
+          -1.1956436872102756
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower no lights in kahawa sukari.check dm for acc number",
+        "posted_on": "08:34am on Sat Nov 28 2020",
+        "area": "kahawa sukari",
+        "user_id": 1021757147456126976
+      },
+      "id": 3065
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.73753435062144,
+          -1.3391956827329785
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care ac no 22598324. No power in Kwarara close karen since last night",
+        "posted_on": "08:34am on Sat Nov 28 2020",
+        "area": "karen",
+        "user_id": 1266388047198896128
+      },
+      "id": 3066
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78008292713034,
+          -1.2891499702860587
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power in Kilimani, Kirichwa Gardens, Elgeyo Marakwet Rd behind Habesha a/c no 434662. Kindly restore",
+        "posted_on": "08:35am on Sat Nov 28 2020",
+        "area": "kilimani",
+        "user_id": 255969775
+      },
+      "id": 3067
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.93275481527811,
+          -1.1975153935289196
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Kahawa wendani is off again. What's happening??",
+        "posted_on": "08:35am on Sat Nov 28 2020",
+        "area": "kahawa wendani",
+        "user_id": 3050586325
+      },
+      "id": 3068
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.77785445606851,
+          -1.2839430039523785
+        ]
+      },
+      "properties": {
+        "text": "Hello @KenyaPower_Care. Your team serving Kileleshwa area moved with speed this morning to replace a fallen pole. Quite impressive service. 😊 https://t.co/OrwmtlkCxg",
+        "posted_on": "08:39am on Sat Nov 28 2020",
+        "area": "kileleshwa",
+        "user_id": 61158365
+      },
+      "id": 3069
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.943802487297134,
+          -1.200627376897895
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no lights in Kahawa Sukari",
+        "posted_on": "08:41am on Sat Nov 28 2020",
+        "area": "kahawa sukari",
+        "user_id": 1111753232404176896
+      },
+      "id": 3070
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.931706710640896,
+          -1.197076801691784
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power in kahawa wendani",
+        "posted_on": "08:43am on Sat Nov 28 2020",
+        "area": "kahawa wendani",
+        "user_id": 280532526
+      },
+      "id": 3071
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.97300703059245,
+          -1.1650737445944328
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no lights in Ruiru area, please assist",
+        "posted_on": "08:43am on Sat Nov 28 2020",
+        "area": "ruiru",
+        "user_id": 2623174117
+      },
+      "id": 3072
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.92832312039534,
+          -1.3773717842682744
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care No power around syokimau katani since morning and we're not on the maintenance list... Kindly inform the issue",
+        "posted_on": "08:44am on Sat Nov 28 2020",
+        "area": "syokimau",
+        "user_id": 953941223408095233
+      },
+      "id": 3073
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78911824583782,
+          -1.209534755098025
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care for 3 days in a row ruaka doesn't have power",
+        "posted_on": "08:47am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 267124187
+      },
+      "id": 3074
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.805194846555345,
+          -1.2640741915359195
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care power outage at brookeside, Westlands.  Ac.2296349.  Kindly assist",
+        "posted_on": "08:49am on Sat Nov 28 2020",
+        "area": "westlands",
+        "user_id": 1487933948
+      },
+      "id": 3075
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.93874161349045,
+          -1.1539907860726626
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Good morning @Kenya power? I wish to inform you that we are out of power in Ruiru Rainbow area for the last 1 hours. Are you addressing the issue? Kindly inform, I am working from home. Just can't work! Thanks in advance.",
+        "posted_on": "08:49am on Sat Nov 28 2020",
+        "area": "ruiru",
+        "user_id": 1124929660243140608
+      },
+      "id": 3076
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.760971854468366,
+          -1.2705670247471377
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower\n  please assist  unscheduled power blackout about 20 minutes ago as of 11:30am affecting Kianda line Waiyaki way no power and entire Kangemi area ac no 225 9489",
+        "posted_on": "08:50am on Sat Nov 28 2020",
+        "area": "kangemi",
+        "user_id": 110678395
+      },
+      "id": 3077
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.93186945208748,
+          -1.196374160041603
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Lights out at kahawa wendani and we ain't on the schedule of power interruption 😞",
+        "posted_on": "08:51am on Sat Nov 28 2020",
+        "area": "kahawa wendani",
+        "user_id": 2859757009
+      },
+      "id": 3078
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78371566750942,
+          -1.2087206321767108
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care hello\nWe have had no lights three days consecutively during the day in Ruaka and it's really inconviniecing to us to work at home\nKindly put them back on!!!",
+        "posted_on": "08:53am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 890393538168532997
+      },
+      "id": 3079
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.79408548826517,
+          -1.3183340726803303
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower_Care there has been a power outage in Langata since yesterday. Kindly restore we have work to do. Acc no. 04214756365..",
+        "posted_on": "08:53am on Sat Nov 28 2020",
+        "area": "langata",
+        "user_id": 1209428428602130437
+      },
+      "id": 3080
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.87705633954547,
+          -1.3259439505672184
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Stupid ass idiotic company... useless ass incompetent company...how many times will we complain about power in Imara Daima and y’all can’t even fix it... mnatubo btw... useless idiots! Nkt!",
+        "posted_on": "08:54am on Sat Nov 28 2020",
+        "area": "imara daima",
+        "user_id": 4427899215
+      },
+      "id": 3081
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.944449533925194,
+          -1.1881447175618398
+        ]
+      },
+      "properties": {
+        "text": "Hello @KenyaPower_Care,\nThere’s power outage at Kahawa Sukari. This has lasted for over an hour now. Kindly sort it asap!",
+        "posted_on": "08:54am on Sat Nov 28 2020",
+        "area": "kahawa sukari",
+        "user_id": 298924290
+      },
+      "id": 3082
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.82341857781714,
+          -1.1676528332617249
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power, kiambu town mburiria road, account number 37151011840",
+        "posted_on": "08:57am on Sat Nov 28 2020",
+        "area": "kiambu town",
+        "user_id": 312639836
+      },
+      "id": 3083
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.87774313377983,
+          -1.324230140071297
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care there was a blackout yesterday at Imara Daima area, tena sahi. Kueni serious",
+        "posted_on": "08:58am on Sat Nov 28 2020",
+        "area": "imara daima",
+        "user_id": 70962319
+      },
+      "id": 3084
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.8218570835473,
+          -1.1600193856046992
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care power outage in Kiambu town from 12:00am bado upto now hazijarudi .whatsup https://t.co/YgAWq4nqFQ",
+        "posted_on": "09:01am on Sat Nov 28 2020",
+        "area": "kiambu town",
+        "user_id": 3432669185
+      },
+      "id": 3085
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78857303599495,
+          -1.209011143421083
+        ]
+      },
+      "properties": {
+        "text": "Lakini @KenyaPower_Care na si kwa ubaad, why are we constantly in the dark huku Ruaka? And please msinijibu na that generic response ya we're addressing the issue. Please give a time estimate ndio tujue kama tunajipa shughuli ama we wait for you to finish. https://t.co/mZoZAw8SIv",
+        "posted_on": "09:02am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 769236788
+      },
+      "id": 3086
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.933504229741615,
+          -1.1974097180935497
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no power at kahawa wendani",
+        "posted_on": "09:06am on Sat Nov 28 2020",
+        "area": "kahawa wendani",
+        "user_id": 365669731
+      },
+      "id": 3087
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.87599556623021,
+          -1.3256139011960122
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Outage in Imara Daima. Urgently attend",
+        "posted_on": "09:08am on Sat Nov 28 2020",
+        "area": "imara daima",
+        "user_id": 39999927
+      },
+      "id": 3088
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.789546432542224,
+          -1.2110895336652097
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Is it possible for Kenya power to give people of Ruaka a schedule on when we get power interruptions and for how long cause working from home is no longer possible?",
+        "posted_on": "09:10am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 2474047142
+      },
+      "id": 3089
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.69503454072598,
+          -1.2477735388756674
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Having power flickers on and off from yesterday till this moment can this be checked please &gt;&gt;&gt; kinoo",
+        "posted_on": "09:11am on Sat Nov 28 2020",
+        "area": "kinoo",
+        "user_id": 1036315150847037440
+      },
+      "id": 3090
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.55907582795061,
+          -0.4544539517531927
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care we have no power at Gitare, Runyenjes, Embu county for 2 days meter number 4389360 phone number 0711389570",
+        "posted_on": "09:12am on Sat Nov 28 2020",
+        "area": "runyenjes",
+        "user_id": 734672176088023040
+      },
+      "id": 3091
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.87536159904286,
+          -1.3244941585536405
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Another day without power Imara Daima!",
+        "posted_on": "09:15am on Sat Nov 28 2020",
+        "area": "imara daima",
+        "user_id": 211103197
+      },
+      "id": 3092
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78994039440395,
+          -1.2127580700864429
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care you guys did your planned maintenance on 25.11.20 so WTF don’t we have power today? Account 14252038493 James Dr. Ruaka",
+        "posted_on": "09:16am on Sat Nov 28 2020",
+        "area": "ruaka",
+        "user_id": 1227126335572791296
+      },
+      "id": 3093
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.90115744554513,
+          -1.208571117758357
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower there is no power in some parts of Zimmerman since yesterday at 10pm. Kindly help",
+        "posted_on": "09:20am on Sat Nov 28 2020",
+        "area": "zimmerman",
+        "user_id": 264224933
+      },
+      "id": 3094
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.880066440642345,
+          -1.32385116366863
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower Power outage again. We simply can't go 48 hours without power outage in Imara Daima. The whole day yesterday again today the same thing",
+        "posted_on": "09:21am on Sat Nov 28 2020",
+        "area": "imara daima",
+        "user_id": 233609946
+      },
+      "id": 3095
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.71040633910454,
+          -1.2829165598466696
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Waithaka no power since asubuhi. ACC no.22171210226",
+        "posted_on": "09:21am on Sat Nov 28 2020",
+        "area": "waithaka",
+        "user_id": 2607268701
+      },
+      "id": 3096
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.74358736895716,
+          -1.274740119588337
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care We havent no power in kangemi man",
+        "posted_on": "09:27am on Sat Nov 28 2020",
+        "area": "kangemi",
+        "user_id": 998613279890165761
+      },
+      "id": 3097
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.63308296885563,
+          -1.1078122897407223
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Hello @KenyaPower_Care we’ve not had power since last night at Redhill Villas off Limuru road. Mtr no 14140550923. Kindly assist us",
+        "posted_on": "09:31am on Sat Nov 28 2020",
+        "area": "limuru",
+        "user_id": 373285256
+      },
+      "id": 3098
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.66589890304918,
+          0.050105406475864186
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care We dont have power, Acc No 14243295509,LANDMARK IRINDA PRIMARY. MERU",
+        "posted_on": "09:33am on Sat Nov 28 2020",
+        "area": "meru",
+        "user_id": 1712874908
+      },
+      "id": 3099
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.98762101786499,
+          -1.2761364981777168
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care No power in Utawala, near St. Benedicta",
+        "posted_on": "09:35am on Sat Nov 28 2020",
+        "area": "utawala",
+        "user_id": 361189653
+      },
+      "id": 3100
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.647176605997,
+          0.09036496299720057
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care kwani mmeamua hatutawatch game bana niaje, hapa meru akuna stima manzy",
+        "posted_on": "09:36am on Sat Nov 28 2020",
+        "area": "meru",
+        "user_id": 3542634916
+      },
+      "id": 3101
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.874329340697,
+          -1.2709687175545388
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care You're the real fraudsters. There is no power in Buruburu Phase 1 area currently.",
+        "posted_on": "09:40am on Sat Nov 28 2020",
+        "area": "buruburu phase 1",
+        "user_id": 2481617302
+      },
+      "id": 3102
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.751785861711355,
+          -1.2647417127719272
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care  Leo mumesema Kangemi nitumie jua kuwatch tv n sawa",
+        "posted_on": "09:41am on Sat Nov 28 2020",
+        "area": "kangemi",
+        "user_id": 1250741132214112261
+      },
+      "id": 3103
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.883295080861814,
+          -1.3267673613284865
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care  No power in parts of Villa Franca again today. Yesterday was the whole day and this week power has been unreliable.Kindly assist this has become a daily occurrence.Account number 01450059249.",
+        "posted_on": "09:45am on Sat Nov 28 2020",
+        "area": "villa franca",
+        "user_id": 393338672
+      },
+      "id": 3104
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.93748833875279,
+          -1.2002098193866662
+        ]
+      },
+      "properties": {
+        "text": "KPLC @KenyaPower_Care blackout around Kahawa Wendani, close to lifeline hosp. There was a blast at a transformer followed by a blackout . Kindly send field crew. Thanks.",
+        "posted_on": "09:46am on Sat Nov 28 2020",
+        "area": "kahawa wendani",
+        "user_id": 174649821
+      },
+      "id": 3105
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.95038399964196,
+          -1.1885617872571532
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Hi, we are in the dark at Kahawa Sukari, meter number 14105215066 @KenyaPower_Care",
+        "posted_on": "09:47am on Sat Nov 28 2020",
+        "area": "kahawa sukari",
+        "user_id": 2873572738
+      },
+      "id": 3106
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.77388842114313,
+          -1.2958154791450245
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care we have a blackout in ole odume road for the last 2hrs. A/c 24111502",
+        "posted_on": "09:50am on Sat Nov 28 2020",
+        "area": "ole odume road",
+        "user_id": 287185186
+      },
+      "id": 3107
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.662643401693884,
+          -1.2367238544631525
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Once again, there's no electricity in Kidfarmaco, Kikuyu. Landmark, Kidfarmaco Primary School. You cannot guarantee us reliable service yet you are making it difficult for us to go off grid. Solar power for all!",
+        "posted_on": "09:58am on Sat Nov 28 2020",
+        "area": "kikuyu",
+        "user_id": 2889446134
+      },
+      "id": 3108
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.66675830096888,
+          -1.2345205101889472
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower_Care No power in Kikuyu since last night",
+        "posted_on": "09:59am on Sat Nov 28 2020",
+        "area": "kikuyu",
+        "user_id": 2188407272
+      },
+      "id": 3109
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.887125615260885,
+          -1.315718026018212
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Hello KPLC, why should we lack power since Thursday? What is the problem 37221555826 Honey suckle Pipeline",
+        "posted_on": "10:00am on Sat Nov 28 2020",
+        "area": "pipeline",
+        "user_id": 705335648102830080
+      },
+      "id": 3110
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.2830341990097,
+          -1.515861258586435
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care your monopoly is on another level. We are in a blackout for a month now. Imilini area, Kathiani sub county, Machakos.",
+        "posted_on": "10:01am on Sat Nov 28 2020",
+        "area": "machakos",
+        "user_id": 763607048366002176
+      },
+      "id": 3111
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.56958418282835,
+          -4.2831137125054175
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care assist we don't have power since yesterday at 7 A.M Meter 48137109 in Diani Ukunda area",
+        "posted_on": "10:04am on Sat Nov 28 2020",
+        "area": "ukunda",
+        "user_id": 116737454
+      },
+      "id": 3112
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.667289472476575,
+          -1.2367881021272402
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care What is happening, blackout at meter number 37187055894, Kikuyu kidfarmaco. No lights since yesterday...",
+        "posted_on": "10:06am on Sat Nov 28 2020",
+        "area": "kikuyu",
+        "user_id": 1154754032579284992
+      },
+      "id": 3113
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.70839946863467,
+          -1.276697331138664
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care we still do not have power in Uthiru around the ILRI roundabout from yesterday. Please help sort this out asap",
+        "posted_on": "10:06am on Sat Nov 28 2020",
+        "area": "uthiru",
+        "user_id": 500535022
+      },
+      "id": 3114
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.71704133704364,
+          -1.2194845900644735
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care pls pls restore the 3phase I. Wangige town.54160026438 is the meter number. We are suffering heavily!!!!!",
+        "posted_on": "10:08am on Sat Nov 28 2020",
+        "area": "wangige",
+        "user_id": 1192239650
+      },
+      "id": 3115
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.752690994768386,
+          -1.2645196751329293
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower\n  please assist  unscheduled power blackout about 2hrs13mins 128mins  as of 11:28am affecting Kianda line Waiyaki way no power and entire Kangemi area intermittent blackouts daily since Monday or  this line despite no maint Announcments ac no 225 9489",
+        "posted_on": "12:18pm on Tue Dec 01 2020",
+        "area": "kangemi",
+        "user_id": 110678395
+      },
+      "id": 361
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78503099259305,
+          -1.2492828481611808
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care No power since last night in Gathiga, Lower Kabete. Kirawa Rd near ACK St. Stephens. Acc: 43645142. Kindly check",
+        "posted_on": "12:39pm on Tue Dec 01 2020",
+        "area": "lower kabete",
+        "user_id": 1139796727140102144
+      },
+      "id": 362
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.67427267592557,
+          -1.386909368802581
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care hakujakuwa na stima ngong from 9:30.....what's happening???",
+        "posted_on": "12:39pm on Tue Dec 01 2020",
+        "area": "ngong",
+        "user_id": 1317492464433889281
+      },
+      "id": 363
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.28595139696365,
+          0.05457200853013864
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care hello guys. This is to let you know that Ramogi Achieng' Oneko Academy and Kunya Primary Schools in Rageng'ni Sublocation, Rarieda Const., Siaya County have been without electricity for more than a week. Kindly send technicians to help us. Thanks",
+        "posted_on": "12:40pm on Tue Dec 01 2020",
+        "area": "siaya",
+        "user_id": 38679987
+      },
+      "id": 364
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.89396101153333,
+          -1.2895101881947206
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care I recieved a call from one of your staff directing me that I will be required to pay for a faulty cable outside my gate if I need it repaired. How can I pay for something that I didn't tamper with?? Once again the cable is a risk to kids. Donholm phase5 Hs 35",
+        "posted_on": "12:49pm on Tue Dec 01 2020",
+        "area": "donholm",
+        "user_id": 1058706515366961152
+      },
+      "id": 365
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.28514895003647,
+          -1.5089106062369992
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower Hello, kindly advice on application no. E21482019110023 to commercial premises in Tala, Machakos County, all dues paid, waiting since July.",
+        "posted_on": "12:52pm on Tue Dec 01 2020",
+        "area": "machakos",
+        "user_id": 45518869
+      },
+      "id": 366
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.71426511174601,
+          0.06033430385886204
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care it's almost 3 hrs since outage in ebusiratsi,vihiga and was not on planned outage.why  should tht happen and we have people who depend on power to earn a living??",
+        "posted_on": "12:52pm on Tue Dec 01 2020",
+        "area": "vihiga",
+        "user_id": 1014897456574861312
+      },
+      "id": 367
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.79209802143875,
+          -1.2131786704304506
+        ]
+      },
+      "properties": {
+        "text": "@Saichovsky @KenyaPower_Care @KenyaPower Just at junction of Rosslyn - Slaughter Rd and Gituamba-Gachie Rd, immediately past past police station. But these people will always take ages to fix that.",
+        "posted_on": "12:52pm on Tue Dec 01 2020",
+        "area": "rosslyn",
+        "user_id": 4117995952
+      },
+      "id": 368
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78525278574159,
+          -1.203581796498992
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Care to explain the constant power outage in Ruaka? Ruaka is not among those listed for today, kindly URGENTLY assist",
+        "posted_on": "12:55pm on Tue Dec 01 2020",
+        "area": "ruaka",
+        "user_id": 1222060006687887360
+      },
+      "id": 369
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.79161372533913,
+          -1.207488323373236
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care you guys decided ni nyinyi na watu wa Ruaka!! Early Christmas present, eh!!! From 1am!!",
+        "posted_on": "13:01pm on Tue Dec 01 2020",
+        "area": "ruaka",
+        "user_id": 1131790575366266880
+      },
+      "id": 370
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.02043386231202,
+          -1.3697837204014731
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care  tafadhali rekebisheni stima kimangao Kyuso District kitui county cc @StateHouseKenya",
+        "posted_on": "13:04pm on Tue Dec 01 2020",
+        "area": "kitui",
+        "user_id": 4919844767
+      },
+      "id": 371
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.91044540714267,
+          -1.218815534575839
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care stima zinarudi saa ngapi kasarani surely. Mnatuchosha sasa.",
+        "posted_on": "13:06pm on Tue Dec 01 2020",
+        "area": "kasarani",
+        "user_id": 942812647245930496
+      },
+      "id": 372
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.98164743380711,
+          -1.2696430683166173
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care utawala kibiku road we don't ha be power..tuko kwa Giza yawa",
+        "posted_on": "19:00pm on Wed Dec 16 2020",
+        "area": "utawala",
+        "user_id": 1150496248945766400
+      },
+      "id": 373
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.9604722751522,
+          -1.4731726644161425
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care No electricity yet in kitengela Muigai get serious it was supposed to be back by 5pm",
+        "posted_on": "19:01pm on Wed Dec 16 2020",
+        "area": "kitengela",
+        "user_id": 1288162768131063810
+      },
+      "id": 374
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.7788854640556,
+          -1.8342391999579786
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care , we need power around Kisaju area Kajiado county.",
+        "posted_on": "19:02pm on Wed Dec 16 2020",
+        "area": "kajiado",
+        "user_id": 1103150186
+      },
+      "id": 375
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.65978417895397,
+          -1.3701145139481994
+        ]
+      },
+      "properties": {
+        "text": "Please do something @KenyaPower_Care. Ngong (Matasia) hamna stima tangu. We're even loyal because we've never went the solar energy way. Stop treating us abnormally.",
+        "posted_on": "19:02pm on Wed Dec 16 2020",
+        "area": "ngong",
+        "user_id": 1328979919964147712
+      },
+      "id": 376
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.96725849182729,
+          -1.47369869084194
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care When are you restoring power in kitengela kiangombe area its past 5pm still no lights",
+        "posted_on": "19:02pm on Wed Dec 16 2020",
+        "area": "kitengela",
+        "user_id": 1672366994
+      },
+      "id": 377
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.96837273754438,
+          -1.4778049512815226
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care. @KenyaPower No power at Kitengela, Safaricom 2 estate.. I thought the interruption was ending at 5pm.. Has it extended to the night?",
+        "posted_on": "19:12pm on Wed Dec 16 2020",
+        "area": "kitengela",
+        "user_id": 390672437
+      },
+      "id": 378
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.96198542067049,
+          -1.4828651049397676
+        ]
+      },
+      "properties": {
+        "text": "Jambo @KenyaPower_Care blackout since noon\n\nAcc no. 14240081878\n\nlocation: Lelan Place: Kitengela, Deliverance Road, near Deliverance Church",
+        "posted_on": "19:14pm on Wed Dec 16 2020",
+        "area": "kitengela",
+        "user_id": 222785534
+      },
+      "id": 379
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.953384757561714,
+          -1.4667247456845869
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care when do we expect power to be restored in Kitengela. The notice indicated planned outage 8am to 5pm and it is now after 7pm?",
+        "posted_on": "19:18pm on Wed Dec 16 2020",
+        "area": "kitengela",
+        "user_id": 837010830
+      },
+      "id": 380
     }
   ]
 }

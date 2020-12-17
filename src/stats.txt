@@ -1,10 +1,22 @@
 {
-  "top_today": "Nairobi West",
+  "top_today": "Kitengela",
   "top_3_this_month": [
-    "Nairobi West",
+    "Kitengela",
     "Machakos",
-    "Old Town"
+    "Ruaka"
   ],
-  "total_complaints_today": 5,
-  "total_complaints_this_month": 5
+  "top_10_this_month": [
+    "Kitengela (5)",
+    "Ruaka (2)",
+    "Machakos (2)",
+    "Ngong (2)",
+    "Old Town (1)",
+    "Vihiga (1)",
+    "Lower Kabete (1)",
+    "Siaya (1)",
+    "Donholm (1)",
+    "Thindigwa (1)"
+  ],
+  "total_complaints_today": 8,
+  "total_complaints_this_month": 25
 }

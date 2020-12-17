@@ -18,6 +18,7 @@ pub struct Statistics {
 
     pub top_today: String,
     pub top_3_this_month: Vec<String>,
+    pub top_10_this_month: Vec<String>,
     pub total_complaints_today: u32,
     pub total_complaints_this_month: u32,
     
@@ -34,6 +35,7 @@ impl Statistics {
         Statistics {
             top_today: String::from("Test"),
             top_3_this_month: Vec::new(),
+            top_10_this_month: Vec::new(),
             total_complaints_today: 0,
             total_complaints_this_month: 0,
             features: Vec::new(),
@@ -49,6 +51,7 @@ impl Statistics {
         self.get_features()
         .updateTopToday()
         .updateTop3Month()
+        .updateTop10Month()
         .updateTotalToday()
         .updateTotalMonth();
 
@@ -145,6 +148,49 @@ impl Statistics {
         self.top_3_this_month = top_3;
         
         self 
+    }
+
+    fn updateTop10Month(mut self) -> Self {
+        //update the top10thismonth vector
+        
+        //Create a hashmap of <area,number of occurunces>
+        let mut areas: HashMap<&str, u32> = HashMap::new();
+        
+        for feature in self.features.iter() {
+            let counter = areas.entry(&feature.properties.area).or_insert(0);
+            *counter += 1;
+        }
+
+        //Collect the hashmap into a vector
+        let mut v = areas.iter().collect::<Vec<_>>();
+        
+        //Sort the vector by occurunces
+        v.sort_by(|a,b| b.1.cmp(&a.1));
+        
+        //Get the first three values
+        let mut top_10 = Vec::new();
+        let mut count: u32 = 0;
+        for entry in v {
+            if count == 10 {
+                break;
+            }
+           //TODO: This compiles but can't be the correct way of doing this. 
+            top_10.push(entry.0.to_owned().to_owned().to_case(Case::Title) + " (" + &entry.1.to_owned().to_string() + ")");
+            count = count + 1;
+        }
+
+        println!("The top 10 areas this month are:");
+        
+        for value in top_10.clone() {
+            println!("{:?}",value);
+        }
+
+        self.top_10_this_month = top_10;
+        
+        self 
+
+
+
     }
 
 

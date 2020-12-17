@@ -23,7 +23,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          39.678712593568356,
+          39.67871259356835,
           -4.061488727726683
         ]
       },
@@ -58,7 +58,7 @@
         "type": "Point",
         "coordinates": [
           36.82301255868232,
-          -1.3096313188910647
+          -1.3096313188910649
         ]
       },
       "properties": {
@@ -85,6 +85,346 @@
         "user_id": 427445790
       },
       "id": 360
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.752690994768386,
+          -1.2645196751329293
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower\n  please assist  unscheduled power blackout about 2hrs13mins 128mins  as of 11:28am affecting Kianda line Waiyaki way no power and entire Kangemi area intermittent blackouts daily since Monday or  this line despite no maint Announcments ac no 225 9489",
+        "posted_on": "12:18pm on Tue Dec 01 2020",
+        "area": "kangemi",
+        "user_id": 110678395
+      },
+      "id": 361
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78503099259305,
+          -1.2492828481611808
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care No power since last night in Gathiga, Lower Kabete. Kirawa Rd near ACK St. Stephens. Acc: 43645142. Kindly check",
+        "posted_on": "12:39pm on Tue Dec 01 2020",
+        "area": "lower kabete",
+        "user_id": 1139796727140102144
+      },
+      "id": 362
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.67427267592557,
+          -1.386909368802581
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care hakujakuwa na stima ngong from 9:30.....what's happening???",
+        "posted_on": "12:39pm on Tue Dec 01 2020",
+        "area": "ngong",
+        "user_id": 1317492464433889281
+      },
+      "id": 363
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.28595139696365,
+          0.05457200853013864
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care hello guys. This is to let you know that Ramogi Achieng' Oneko Academy and Kunya Primary Schools in Rageng'ni Sublocation, Rarieda Const., Siaya County have been without electricity for more than a week. Kindly send technicians to help us. Thanks",
+        "posted_on": "12:40pm on Tue Dec 01 2020",
+        "area": "siaya",
+        "user_id": 38679987
+      },
+      "id": 364
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.89396101153333,
+          -1.2895101881947206
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care I recieved a call from one of your staff directing me that I will be required to pay for a faulty cable outside my gate if I need it repaired. How can I pay for something that I didn't tamper with?? Once again the cable is a risk to kids. Donholm phase5 Hs 35",
+        "posted_on": "12:49pm on Tue Dec 01 2020",
+        "area": "donholm",
+        "user_id": 1058706515366961152
+      },
+      "id": 365
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.28514895003647,
+          -1.5089106062369992
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care @KenyaPower Hello, kindly advice on application no. E21482019110023 to commercial premises in Tala, Machakos County, all dues paid, waiting since July.",
+        "posted_on": "12:52pm on Tue Dec 01 2020",
+        "area": "machakos",
+        "user_id": 45518869
+      },
+      "id": 366
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.71426511174601,
+          0.06033430385886204
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care it's almost 3 hrs since outage in ebusiratsi,vihiga and was not on planned outage.why  should tht happen and we have people who depend on power to earn a living??",
+        "posted_on": "12:52pm on Tue Dec 01 2020",
+        "area": "vihiga",
+        "user_id": 1014897456574861312
+      },
+      "id": 367
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.79209802143875,
+          -1.2131786704304506
+        ]
+      },
+      "properties": {
+        "text": "@Saichovsky @KenyaPower_Care @KenyaPower Just at junction of Rosslyn - Slaughter Rd and Gituamba-Gachie Rd, immediately past past police station. But these people will always take ages to fix that.",
+        "posted_on": "12:52pm on Tue Dec 01 2020",
+        "area": "rosslyn",
+        "user_id": 4117995952
+      },
+      "id": 368
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78525278574159,
+          -1.203581796498992
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Care to explain the constant power outage in Ruaka? Ruaka is not among those listed for today, kindly URGENTLY assist",
+        "posted_on": "12:55pm on Tue Dec 01 2020",
+        "area": "ruaka",
+        "user_id": 1222060006687887360
+      },
+      "id": 369
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.79161372533913,
+          -1.207488323373236
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care you guys decided ni nyinyi na watu wa Ruaka!! Early Christmas present, eh!!! From 1am!!",
+        "posted_on": "13:01pm on Tue Dec 01 2020",
+        "area": "ruaka",
+        "user_id": 1131790575366266880
+      },
+      "id": 370
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.02043386231202,
+          -1.3697837204014731
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care  tafadhali rekebisheni stima kimangao Kyuso District kitui county cc @StateHouseKenya",
+        "posted_on": "13:04pm on Tue Dec 01 2020",
+        "area": "kitui",
+        "user_id": 4919844767
+      },
+      "id": 371
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.91044540714267,
+          -1.218815534575839
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care stima zinarudi saa ngapi kasarani surely. Mnatuchosha sasa.",
+        "posted_on": "13:06pm on Tue Dec 01 2020",
+        "area": "kasarani",
+        "user_id": 942812647245930496
+      },
+      "id": 372
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.98164743380711,
+          -1.2696430683166173
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care utawala kibiku road we don't ha be power..tuko kwa Giza yawa",
+        "posted_on": "19:00pm on Wed Dec 16 2020",
+        "area": "utawala",
+        "user_id": 1150496248945766400
+      },
+      "id": 373
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.9604722751522,
+          -1.4731726644161425
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care No electricity yet in kitengela Muigai get serious it was supposed to be back by 5pm",
+        "posted_on": "19:01pm on Wed Dec 16 2020",
+        "area": "kitengela",
+        "user_id": 1288162768131063810
+      },
+      "id": 374
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.7788854640556,
+          -1.8342391999579786
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care , we need power around Kisaju area Kajiado county.",
+        "posted_on": "19:02pm on Wed Dec 16 2020",
+        "area": "kajiado",
+        "user_id": 1103150186
+      },
+      "id": 375
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.65978417895397,
+          -1.3701145139481994
+        ]
+      },
+      "properties": {
+        "text": "Please do something @KenyaPower_Care. Ngong (Matasia) hamna stima tangu. We're even loyal because we've never went the solar energy way. Stop treating us abnormally.",
+        "posted_on": "19:02pm on Wed Dec 16 2020",
+        "area": "ngong",
+        "user_id": 1328979919964147712
+      },
+      "id": 376
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.96725849182729,
+          -1.47369869084194
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care When are you restoring power in kitengela kiangombe area its past 5pm still no lights",
+        "posted_on": "19:02pm on Wed Dec 16 2020",
+        "area": "kitengela",
+        "user_id": 1672366994
+      },
+      "id": 377
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.96837273754438,
+          -1.4778049512815226
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care. @KenyaPower No power at Kitengela, Safaricom 2 estate.. I thought the interruption was ending at 5pm.. Has it extended to the night?",
+        "posted_on": "19:12pm on Wed Dec 16 2020",
+        "area": "kitengela",
+        "user_id": 390672437
+      },
+      "id": 378
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.96198542067049,
+          -1.4828651049397676
+        ]
+      },
+      "properties": {
+        "text": "Jambo @KenyaPower_Care blackout since noon\n\nAcc no. 14240081878\n\nlocation: Lelan Place: Kitengela, Deliverance Road, near Deliverance Church",
+        "posted_on": "19:14pm on Wed Dec 16 2020",
+        "area": "kitengela",
+        "user_id": 222785534
+      },
+      "id": 379
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.953384757561714,
+          -1.4667247456845869
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care when do we expect power to be restored in Kitengela. The notice indicated planned outage 8am to 5pm and it is now after 7pm?",
+        "posted_on": "19:18pm on Wed Dec 16 2020",
+        "area": "kitengela",
+        "user_id": 837010830
+      },
+      "id": 380
     }
   ]
 }

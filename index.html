@@ -273,7 +273,18 @@ function retrieveData() {
 		document.getElementById("total_today").innerHTML = "<b><span class='data'>" + data.total_complaints_today + "</span></b> complaints have been captured <b>today</b>.";
 		document.getElementById("top_today").innerHTML = "Most complaints <b>today</b> are coming from <b><span class='data'>"+ data.top_today + "</span></b>.";
 		document.getElementById("total_this_month").innerHTML = "A total of <b><span class='data'>" + data.total_complaints_this_month + "</span></b> complaints have been captured this month.";
-		document.getElementById("top3").innerHTML = "This month, most complaints are coming from <b><span class='data'>" + data.top_3_this_month[0] + "</span></b>, <span class='data'><b>" + data.top_3_this_month[1] + "</span></b>, and <span class='data'><b>" + data.top_3_this_month[2] + "</span></b>.";
+		//document.getElementById("top3").innerHTML = "This month, most complaints are coming from <b><span class='data'>" + data.top_3_this_month[0] + "</span></b>, <span class='data'><b>" + data.top_3_this_month[1] + "</span></b>, and <span class='data'><b>" + data.top_3_this_month[2] + "</span></b>.";
+
+		document.getElementById("top3").innerHTML = "This month, most complaints are coming from <span class='data'>" + data.top_10_this_month[0] +  ", " 
+			+ data.top_10_this_month[1] + ", " 
+			+ data.top_10_this_month[2] + ", "
+			+ data.top_10_this_month[3] + ", " 
+			+ data.top_10_this_month[4] + ", " 
+			+ data.top_10_this_month[5] + ", " 
+			+ data.top_10_this_month[6] + ", " 
+			+ data.top_10_this_month[7] + ", " 
+			+ data.top_10_this_month[8] + ", " 
+			+ data.top_10_this_month[9] + "</span>";
 
 
 	}
