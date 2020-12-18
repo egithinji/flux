@@ -24,6 +24,7 @@ use flux::pattern_matching::match_location_description;
 use chrono::prelude::*;
 use std::env;
 use flux::config::Config;
+use convert_case::{Case, Casing};
 
 
 #[tokio::main]
@@ -165,7 +166,7 @@ fn process_tweet(tweet: egg_mode::tweet::Tweet) -> Option<Feature> {
                 posted_on: lt_formatted,
                 text: tweet.text.to_owned(),
                 user_id: uid,
-                area: v,
+                area: v.to_case(Case::Title),
             };
 
             //Convert the tweet to a Feature
