@@ -9,6 +9,8 @@ use std::fs::OpenOptions;
 use std::fs::File;
 use std::io::Write;
 use convert_case::{Case, Casing};
+use chrono::{DateTime,NaiveDate};
+use chrono::format::ParseError;
 
 #[derive(Serialize)]
 pub struct Statistics {
@@ -268,4 +270,178 @@ fn is_today(date: &str) -> bool {
         false
     }
 
+}
+
+#[derive(Debug)]
+pub struct AreaStat {
+        //Corresponds to one line in the csv file used to generate the barchart race
+        date: String, //the date in YYYY-MM-DD format
+        name: String, //the area
+        category: String, //same as the area so that each area has a different color
+        value: usize, //cumulative number of complaints that day
+
+}
+
+impl AreaStat {
+        
+
+        pub fn print_me (self) {
+                //prints itself to the area_stats.csv file
+
+                let mut file = OpenOptions::new()
+                    .append(true)
+                    .open("area_stats.csv")
+                    .unwrap();
+
+                //please note I'm intentionally not printing the category
+                if let Err(e) = writeln!(file, "{},{},{}",self.date, self.name, self.value) {
+                        eprintln!("Couldn't write area_stat to file: {}", e);
+                }
+                
+                
+        }
+}
+
+pub fn print_area_stat_column_headers() {
+       //prints the column headers for the area stats (date, name, category, value) in the
+       //area_stats.txt file
+
+        let mut file = OpenOptions::new()
+            .write(true)
+            .open("area_stats.csv")
+            .unwrap();
+
+        //please note I'm intentionally not printing the category
+        if let Err(e) = writeln!(file, "date,name,value") {
+                eprintln!("Couldn't write the column headers in areastat file: {}", e);
+
+        }
+
+
+}
+
+
+pub fn generate_area_stats(stats: HashMap<String,usize>, up_to_date: String, year: &str, month: &str) -> Vec<AreaStat>{
+    //Given a hashmap containing <area:cumulative_complaints> values,
+    //and a date as a string, return a vector of AreaStat objects representing
+    //the data for each area up to that date.
+   
+    //This is the vector that will hold the areastats:
+    let mut areaStats = Vec::new();
+
+
+    //Collect the hashmap into a vector
+    let mut v = stats.iter().collect::<Vec<_>>();
+
+    for entry in v {
+
+            let area_name = entry.0.to_owned();
+
+            let mut d = String::new();
+            d.push_str(year);
+            d.push_str("-");
+            d.push_str(month);
+            d.push_str("-");
+            if up_to_date.len() < 2 {
+                    d.push_str("0");
+                    d.push_str(&up_to_date);
+            } else {
+                    d.push_str(&up_to_date);
+            }
+
+
+            let a = AreaStat {
+                    date: d,
+                    name: area_name.clone(),
+                    category: area_name.clone(),
+                    value: entry.1.to_owned(),
+            };
+
+            areaStats.push(a);
+
+    }
+
+    areaStats
+
+}
+
+pub fn get_stats_up_to_date(features: &Vec<Feature>, up_to_day: usize) -> HashMap<String,usize>{
+        //Given a vector of features (from the feature collection) and an end day (e.g. 01, 02 up to 31),
+        //returns hashmap of area complaints up to that day with values
+        //<area,count>
+        
+        //Create a hashmap of <area,number of occurunces>
+        let mut areas = HashMap::new();
+
+        for feature in features.iter() {
+            let area_name = feature.properties.area.to_owned();
+            let counter = areas.entry(area_name).or_insert(0);
+            *counter += 1;
+            //get the day of the month in the current feature
+            let current_day = get_day_from_feature(feature);
+            //if it's greater than the up_to_day, exit the loop
+            if current_day > up_to_day {
+                    break;
+            }
+        }
+
+        areas
+
+}
+
+fn get_day_from_feature(feature: &Feature) -> usize {
+        //Given a feature, returns the day of the month
+
+        let text = &feature.properties.posted_on;
+        //Date is in the format: '15:28pm on Wed Nov 25 2020'
+
+        let vec: Vec<&str> = text.split(" ").collect();
+
+        let day = vec[4].parse::<usize>().unwrap();
+
+        day
+
+}
+
+
+pub fn get_vec_of_features() -> Vec<Feature> {
+        //Returns a vector of features from the feature collection.
+
+        //get the feature collection from the file
+        let fc = FeatureCollection::from_file("locations.geojson").unwrap();
+        //get the vector of features from the feature collection
+        let the_features = fc.features;
+
+       the_features 
+}
+
+fn get_formatted_date_from_string(text: String) -> String {
+    //Given a date in the format: '15:28pm on Wed Nov 25 2020' returns 2020-11-25
+        
+    println!("Received {}",text);
+
+    let vec: Vec<&str> = text.split(" ").collect();
+
+    let mut new_string = String::new();
+
+    new_string.push_str(vec[3]); //i.e. Nov in the example
+    new_string.push_str(vec[4]); //i.e. 25 in the example
+    new_string.push_str(vec[5]); //i.e. 2020 in the example
+
+    println!("Parsing: ");
+    println!("{}",new_string);
+
+    
+    let value = NaiveDate::parse_from_str(&new_string,"%b%d%Y");
+    let mut formatted_date = String::new();
+    match value {
+            Ok(v) => {
+                    formatted_date = v.to_string();
+            },
+            Err(e) => {
+                    panic!("Couldn't parse the date.");
+            }
+    }
+
+    formatted_date
 }

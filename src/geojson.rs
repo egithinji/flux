@@ -30,13 +30,6 @@ pub struct Properties {
     pub user_id: u64,
 }
 
-#[derive(Serialize, Deserialize)]
-#[derive(Clone)]
-pub struct OldProperties {
-    pub text: String,
-    pub posted_on: String,
-    pub area: String,
-}
 
 
 //Corresponds to geojson feature
@@ -49,15 +42,6 @@ pub struct Feature {
     pub id: usize, //unique id for this feature
 }
 
-//TEMP STRUCT
-#[derive(Serialize, Deserialize)]
-#[derive(Clone)]
-pub struct OldFeature {
-    pub r#type: GeojsonType,
-    pub geometry: Geometry,
-    pub properties: OldProperties,
-    pub id: usize,
-}
 
 
 //Corresponds to geojson feature collection
@@ -69,29 +53,6 @@ pub struct FeatureCollection {
     pub file_name: String,
 }
 
-//TEMP STRUCT
-#[derive(Serialize, Deserialize)]
-#[derive(Clone)]
-pub struct OldFeatureCollection {
-    pub r#type: GeojsonType,
-    pub features: Vec<OldFeature>,
-    #[serde(skip)]
-    pub file_name: String,
-}
-
-//TEMP IMPL
-impl OldFeatureCollection {
-    pub fn from_file(filename: &str) -> Result<OldFeatureCollection> {
-        //Read the contents of the file containing the feature collection
-        let contents = fs::read_to_string(filename)
-            .expect("Something went wrong reading the feature collection file");
-
-        //Use serde_json to convert the string into json object
-        let mut fc: OldFeatureCollection = serde_json::from_str(&contents)?;
-        fc.file_name = filename.to_string();
-        Ok(fc)
-    }
-}
 
 //Creates a new feature collection with no features
 impl FeatureCollection {

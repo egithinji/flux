@@ -161,12 +161,14 @@ fn process_tweet(tweet: egg_mode::tweet::Tweet) -> Option<Feature> {
             }
 
             //Then create a flux tweet with all this information
+            //If the area has an underscore replace it with a space
+            let a = v.replace("_"," ");
             let new_tweet = Tweet {
                 location: [random_point.0, random_point.1],
                 posted_on: lt_formatted,
                 text: tweet.text.to_owned(),
                 user_id: uid,
-                area: v.to_case(Case::Title).to_lowercase(),
+                area: a.to_case(Case::Title).to_lowercase(),
             };
 
             //Convert the tweet to a Feature

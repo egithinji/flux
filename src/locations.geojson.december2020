@@ -6,6 +6,74 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          36.7733820134872,
+          -1.2040267583195452
+        ]
+      },
+      "properties": {
+        "text": "Hello @KenyaPower_Care something just blew up in Ruaka and lights are out. This is around Joyland area. A/C 37207580988",
+        "posted_on": "22:16pm on Mon Nov 30 2020",
+        "area": "joyland",
+        "user_id": 15192434
+      },
+      "id": 3583
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78318548942847,
+          -1.203438397650217
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care There is terrible sparks, twice so far, at Ruaka, Police station, Slaughter Road. An issue with transformer or what? Kindly act before it sets the whole place on fire!",
+        "posted_on": "22:23pm on Mon Nov 30 2020",
+        "area": "ruaka",
+        "user_id": 4117995952
+      },
+      "id": 3584
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.7866690550488,
+          -1.2073872213489438
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care Sudden black out in Ruaka, QuickMart, old ruaka road.",
+        "posted_on": "22:49pm on Mon Nov 30 2020",
+        "area": "ruaka",
+        "user_id": 1230835862834905089
+      },
+      "id": 3585
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.78987458821042,
+          -1.207805972359592
+        ]
+      },
+      "properties": {
+        "text": "@KenyaPower_Care no lights in Ruaka behind quickmart supermarket. Zimepotea at around 1.16am. It's now 2.08am and am still waiting for them to be fixed... Kindly note...",
+        "posted_on": "23:08pm on Mon Nov 30 2020",
+        "area": "ruaka",
+        "user_id": 1085424235177304065
+      },
+      "id": 3586
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           36.776311903338744,
           -1.2052812293548698
         ]
